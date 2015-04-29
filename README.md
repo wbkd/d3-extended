@@ -81,5 +81,27 @@ d3.selectAll('li')
 
 **selection.before**
 
+**selection.after**
 
+**selection.clear**
+
+**selection.appendTo**
+
+**selection.length**
+
+**selection.toggleClass**
+
+**selection.addClass**
+
+**selection.removeClass**
+
+**selection.eq**
+
+----
+
+##### Additional functions (not related to jQuery)
+
+**selection.moveToBack**
+
+**selection.moveToFront**
 
