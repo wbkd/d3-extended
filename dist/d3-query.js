@@ -57,9 +57,19 @@ d3.selection.prototype.css = d3.selection.style;
 d3.selection.prototype.eq = function(index) {
   return d3.select(this[0][index]);
 }
+d3.selection.prototype.first = function() {
+  return d3.select(this[0][0]);
+}
+d3.selection.prototype.hasClass = function(className) {
+  return this.classed(className);
+} 
 d3.selection.prototype.hide = function() {
   this.style('display', 'none');
   return this;
+}
+d3.selection.prototype.last = function() {
+  var length = this[0].length;
+  return d3.select(this[0][length-1]);
 }
 d3.selection.prototype.length = function() {
   return this[0].length;

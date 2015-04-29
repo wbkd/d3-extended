@@ -6,7 +6,18 @@ Read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-j
 
 ### Installation
 
+**npm**
+
+**bower**
+
 **as d3 plugin**
+
+The dist folder contains two files which you can use as a d3-plugin in your projects:
+
+```
+dist/d3-query.js
+dist/d3-query.min.js
+```
 
 ```
 <script src="path/to/d3.js"></script>
