@@ -1,0 +1,22 @@
+{
+  "name": "d3query",
+  "version": "1.0.0",
+  "description": "An extended version of d3. Extended with some core functions of jQuery.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "d3",
+    "jQuery"
+  ],
+  "author": "chrtze",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^3.5.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2"
+  }
+}
