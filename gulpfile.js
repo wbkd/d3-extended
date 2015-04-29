@@ -1,5 +1,10 @@
 var gulp = require('gulp'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    del = require('del');
+
+gulp.task('clean', function() {
+  del('dist');
+});
 
 gulp.task('d3-plugin', function() {
   return gulp.src('src/**')
@@ -7,4 +12,4 @@ gulp.task('d3-plugin', function() {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('build', ['d3-plugin'])
+gulp.task('build', ['clean', 'd3-plugin'])
