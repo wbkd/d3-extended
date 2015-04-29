@@ -1,3 +1,3 @@
-d3.selection.prototype.toggleClass = function(className) {
+d3.selection.prototype.removeClass = function(className) {
     return this.classed(className, false);
 }
