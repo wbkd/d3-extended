@@ -57,6 +57,10 @@ d3.selection.prototype.css = d3.selection.style;
 d3.selection.prototype.eq = function(index) {
   return d3.select(this[0][index]);
 }
+d3.selection.prototype.hide = function() {
+  this.style('display', 'none');
+  return this;
+}
 d3.selection.prototype.length = function() {
   return this[0].length;
 }
@@ -75,6 +79,14 @@ d3.selection.prototype.moveToFront = function() {
 }
 d3.selection.prototype.toggleClass = function(className) {
     return this.classed(className, false);
+}
+d3.selection.prototype.show = function() {
+  this.style('display', 'initial');
+  return this;
+}
+d3.selection.prototype.toggle = function() {
+  var isHidden = this.style('display') == 'none';
+  return this.style('display', isHidden ? 'inherit' : 'none');
 }
 d3.selection.prototype.toggleClass = function(className) {
     this.classed(className, !this.classed(className));

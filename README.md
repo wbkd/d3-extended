@@ -6,26 +6,6 @@ Read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-j
 
 ### Installation
 
-**with npm**
-
-```
-$npm install --save d3-query
-```
-
-```
-var d3 = require('d3-query');
-```
-
-**with bower**
-
-```
-bower install --save d3-query
-```
-
-```
-<script src="bower_components/d3-query/dist/d3-query.js"></script>
-```
-
 **as d3 plugin**
 
 ```
@@ -97,9 +77,23 @@ d3.selectAll('li')
 
 **selection.eq**
 
+**selection.css**
+
+**selection.show**
+
+**selection.hide**
+
+**selection.toggle**
+
+**selection.first**
+
+**selection.last**
+
+**selection.hasClass**
+
 ----
 
-##### Additional functions (not related to jQuery)
+#### Additional functions (not related to jQuery)
 
 **selection.moveToBack**
 
