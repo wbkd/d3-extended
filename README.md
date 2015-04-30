@@ -31,45 +31,45 @@ This will create all needed files in the ```dist``` folder.
 
 ## API Overview
 
-###### [DOM Manipualtion](#dom-manipulation)
+#### [DOM Manipualtion](#dom-manipulation)
 
-[after](#selection.after)
-[before](#selection.before)
-[clear](#selection.clear)
-[appendTo](#selection.appendTo)
-[toggleClass](#selection.toggleClass)
-[addClass](#selection.addClass)
-[removeClass](#selection.removeClass)
-[hasClass](#selection.hasClass)
-[css](#selection.css)
-[show](#selection.show)
-[hide](#selection.hide)
-[toggle](#selection.toggle)
-
-
-###### [Traversing](#traversing)
-
-[eq](#selection.eq)
-[first](#selection.first)
-[last](#selection.last)
+* [after](#selection.after)
+* [before](#selection.before)
+* [clear](#selection.clear)
+* [appendTo](#selection.appendTo)
+* [toggleClass](#selection.toggleClass)
+* [addClass](#selection.addClass)
+* [removeClass](#selection.removeClass)
+* [hasClass](#selection.hasClass)
+* [css](#selection.css)
+* [show](#selection.show)
+* [hide](#selection.hide)
+* [toggle](#selection.toggle)
 
 
-###### [Events](#events)
+#### [Traversing](#traversing)
 
-[trigger](#selection.trigger)
+* [eq](#selection.eq)
+* [first](#selection.first)
+* [last](#selection.last)
 
 
-######[Additional](#additional-functions)
+#### [Events](#events)
 
-[moveToBack](#selection.moveToBack)
-[moveToFront](#selection.moveToFront)
+* [trigger](#selection.trigger)
+
+
+#### [Additional](#additional-functions)
+
+* [moveToBack](#selection.moveToBack)
+* [moveToFront](#selection.moveToFront)
 
 
 ## API Documentation
 
-### DOM Manipulation
+## DOM Manipulation
 
-###### selection.after
+#### selection.after
 
 jQuery equivalent: [$.after](http://api.jquery.com/after/)
 
@@ -88,7 +88,7 @@ d3.selectAll('li')
   //do something else with the inserted elements...
 ```
 
-###### selection.before
+#### selection.before
 
 jQuery equivalent: [$.before](http://api.jquery.com/before/)
 
@@ -108,7 +108,7 @@ d3.selectAll('li')
 ```
 
 
-##### selection.clear
+#### selection.clear
 
 jQuery equivalent: [$.empty](http://api.jquery.com/empty/)
 
@@ -128,7 +128,7 @@ d3.selectAll('ul')
 ```
 
 
-##### selection.appendTo
+#### selection.appendTo
 
 jQuery equivalent: [$.appendTo](http://api.jquery.com/appendto/)
 
@@ -145,7 +145,7 @@ d3.selectAll('.foo').appendTo('.target');
 ```
 
 
-##### selection.addClass
+#### selection.addClass
 
 jQuery equivalent: [$.addClass](http://api.jquery.com/addclass/)
 
@@ -161,7 +161,7 @@ Example:
 d3.selectAll('ul').addClass('active');  
 ```
 
-##### selection.removeClass
+#### selection.removeClass
 
 jQuery equivalent: [$.removeClass](http://api.jquery.com/removeclass/)
 
@@ -178,7 +178,7 @@ d3.selectAll('ul').removeClass('active');
 ```
 
 
-##### selection.toggleClass
+#### selection.toggleClass
 
 jQuery equivalent: [$.toggleClass](http://api.jquery.com/toggleclass/)
 
@@ -195,7 +195,7 @@ d3.selectAll('ul').toggleClass('active');
 ```
 
 
-##### selection.hasClass
+#### selection.hasClass
 
 jQuery equivalent: [$.hasClass](http://api.jquery.com/hasclass/)
 
@@ -213,7 +213,7 @@ d3.selectAll('ul').hasClass('active');
 ```
 
 
-##### selection.css
+#### selection.css
 
 jQuery equivalent: [$.css](http://api.jquery.com/css/)
 
@@ -239,7 +239,7 @@ d3.selectAll('.foo').css({
 }); 
 ```
 
-##### selection.show
+#### selection.show
 
 jQuery equivalent: [$.show](http://api.jquery.com/show/)
 
@@ -257,7 +257,7 @@ d3.selectAll('.foo').show();
 
 ```
 
-##### selection.hide
+#### selection.hide
 
 jQuery equivalent: [$.hide](http://api.jquery.com/hide/)
 
@@ -275,7 +275,7 @@ d3.selectAll('.foo').hide();
 
 ```
 
-##### selection.toggle
+#### selection.toggle
 
 jQuery equivalent: [$.toggle](http://api.jquery.com/toggle/)
 
@@ -294,9 +294,9 @@ d3.selectAll('.foo').toggle();
 ```
 
 
-### Traversing
+## Traversing
 
-##### selection.eq
+#### selection.eq
 
 jQuery equivalent: [$.eq](http://api.jquery.com/eq/)
 
@@ -315,7 +315,8 @@ d3.selectAll('li').eq('0');
 ```
 
 
-##### selection.first
+#### selection.first
+
 jQuery equivalent: [$.first](http://api.jquery.com/first/)
 
 Reduces the current selection to the first element. Then returns the reduced selection.
@@ -333,7 +334,7 @@ d3.selectAll('ul').first();
 ```
 
 
-##### selection.last
+#### selection.last
 
 jQuery equivalent: [$.last](http://api.jquery.com/last/)
 
@@ -351,10 +352,10 @@ d3.selectAll('ul').last();
 
 ```
 
-### Events
+## Events
 
 
-##### selection.trigger
+#### selection.trigger
 
 jQuery equivalent: [$.trigger](http://api.jquery.com/trigger/)
 
@@ -380,7 +381,7 @@ d3.select(document).trigger('dataChange', {newData: 'HelloWorld!'});
 ### Additional functions
 These functions are not related to jQuery but they are little helper function we often use in our applications.
 
-###### selection.moveToBack
+#### selection.moveToBack
 
 Displays SVG element above the other ones.
 
@@ -394,7 +395,7 @@ Example:
 d3.select('svg circle').moveToBack();
 ```
 
-###### selection.moveToFront
+#### selection.moveToFront
 
 Displays SVG element below the other ones.
 
