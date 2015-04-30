@@ -29,43 +29,42 @@ dist/d3-query.min.js
 To build the project run ```gulp build```.
 This will create all needed files in the ```dist``` folder.
 
-## API Overview
+## API Documentation
 
 #### [DOM Manipualtion](#dom-manipulation)
 
-* [after](#selection.after)
-* [before](#selection.before)
-* [clear](#selection.clear)
-* [appendTo](#selection.appendTo)
-* [toggleClass](#selection.toggleClass)
-* [addClass](#selection.addClass)
-* [removeClass](#selection.removeClass)
-* [hasClass](#selection.hasClass)
-* [css](#selection.css)
-* [show](#selection.show)
-* [hide](#selection.hide)
-* [toggle](#selection.toggle)
+* [after](#selectionafter)
+* [before](#selectionbefore)
+* [clear](#selectionclear)
+* [appendTo](#selectionappendTo)
+* [toggleClass](#selectiontoggleClass)
+* [addClass](#selectionaddClass)
+* [removeClass](#selectionremoveClass)
+* [hasClass](#selectionhasClass)
+* [css](#selectioncss)
+* [show](#selectionshow)
+* [hide](#selectionhide)
+* [toggle](#selectiontoggle)
 
 
 #### [Traversing](#traversing)
 
-* [eq](#selection.eq)
-* [first](#selection.first)
-* [last](#selection.last)
+* [eq](#selectioneq)
+* [first](#selectionfirst)
+* [last](#selectionlast)
 
 
 #### [Events](#events)
 
-* [trigger](#selection.trigger)
+* [trigger](#selectiontrigger)
 
 
 #### [Additional](#additional-functions)
 
-* [moveToBack](#selection.moveToBack)
-* [moveToFront](#selection.moveToFront)
+* [moveToBack](#selectionmoveToBack)
+* [moveToFront](#selectionmoveToFront)
 
 
-## API Documentation
 
 ## DOM Manipulation
 
