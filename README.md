@@ -377,7 +377,9 @@ d3.select(document).trigger('dataChange', {newData: 'HelloWorld!'});
 
 ----
 
-### Additional functions
+
+
+## Additional Functions
 These functions are not related to jQuery but they are little helper function we often use in our applications.
 
 #### selection.moveToBack
