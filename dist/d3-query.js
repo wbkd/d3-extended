@@ -1,6 +1,7 @@
-d3.selection.prototype.toggleClass = function(className) {
+d3.selection.prototype.addClass = function(className) {
     return this.classed(className, true);
 }
+
 d3.selection.prototype.after = function(tagName) {
   var elements = [];
 
@@ -71,9 +72,6 @@ d3.selection.prototype.last = function() {
   var length = this[0].length;
   return d3.select(this[0][length-1]);
 }
-d3.selection.prototype.length = function() {
-  return this[0].length;
-}
 d3.selection.prototype.moveToBack = function() { 
     return this.each(function() { 
         var firstChild = this.parentNode.firstChild; 
@@ -87,12 +85,16 @@ d3.selection.prototype.moveToFront = function() {
     this.parentNode.appendChild(this);
   });
 }
-d3.selection.prototype.toggleClass = function(className) {
+d3.selection.prototype.removeClass = function(className) {
     return this.classed(className, false);
 }
+
 d3.selection.prototype.show = function() {
   this.style('display', 'initial');
   return this;
+}
+d3.selection.prototype.size = function() {
+  return this[0].length;
 }
 d3.selection.prototype.toggle = function() {
   var isHidden = this.style('display') == 'none';

@@ -1,8 +1,8 @@
 # d3-query
 
-A d3js extension - extended with implementations of jQuery functions.
+A d3js extension - Use common jQuery functions in your d3 application.
 
-Read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-jquery-with-d3)
+If you want to get to know more about this project, feel free to read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-jquery-with-d3)
 
 ### Installation
 

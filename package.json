@@ -1,10 +1,10 @@
 {
   "name": "d3query",
   "version": "1.0.0",
-  "description": "An extended version of d3. Extended with some core functions of jQuery.",
+  "description": "d3query extends d3 with some common jQuery functions.",
   "main": "lib/d3-query.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "browserify test/*-test.js | tape-run"
   },
   "keywords": [
     "d3",
@@ -14,5 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "d3": "^3.5.5"
+  },
+  "devDependencies": {
+    "tape-run": "^1.0.0"
   }
 }
