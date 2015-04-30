@@ -1,10 +1,10 @@
 {
   "name": "d3query",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "d3query extends d3 with some common jQuery functions.",
   "main": "lib/d3-query.js",
   "scripts": {
-    "test": "browserify test/*-test.js | tape-run"
+    "test": "node_modules/.bin/browserify test/*-test.js | node_modules/.bin/tape-run"
   },
   "keywords": [
     "d3",
@@ -16,6 +16,7 @@
     "d3": "^3.5.5"
   },
   "devDependencies": {
+    "browserify": "^10.0.0",
     "tape-run": "^1.0.0"
   }
 }
