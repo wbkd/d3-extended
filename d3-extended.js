@@ -72,7 +72,7 @@ d3.selection.prototype.first = function() {
 }
 d3.selection.prototype.hasClass = function(className) {
   return this.classed(className);
-} 
+}
 d3.selection.prototype.hide = function() {
   this.style('display', 'none');
   return this;

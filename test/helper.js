@@ -1,5 +1,5 @@
 var d3Extended = require('d3');
-require('../d3-query.js')(d3Extended);
+require('../d3-extended.js')(d3Extended);
 
 function getEmptyBody(){
   document.body.innerHTML = ''

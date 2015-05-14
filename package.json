@@ -1,8 +1,8 @@
 {
-  "name": "d3query",
-  "version": "0.1.0",
-  "description": "d3query extends d3 with some common jQuery functions.",
-  "main": "lib/d3-query.js",
+  "name": "d3-extended",
+  "version": "1.0.0",
+  "description": "d3-extended extends d3 with some common jQuery functions.",
+  "main": "./d3-extended.js",
   "scripts": {
     "test": "node_modules/.bin/browserify test/*-test.js | node_modules/.bin/tape-run"
   },
