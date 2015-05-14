@@ -12,11 +12,11 @@ If you want to get to know more about this project, feel free to read the blog p
 
 **as d3 plugin**
 
-The dist folder contains two files which you can use as a d3-plugin in your projects:
+The root folder contains two files which you can use as a d3-plugin in your projects:
 
 ```
-dist/d3-query.js
-dist/d3-query.min.js
+d3-query.js
+d3-query.min.js
 ```
 
 ```
@@ -27,7 +27,7 @@ dist/d3-query.min.js
 ### Build from source
 
 To build the project run ```gulp build```.
-This will create all needed files in the ```dist``` folder.
+This will create all needed files in the root folder.
 
 ## API Documentation
 
