@@ -1,3 +1,12 @@
+(function() {
+
+var extend = function(d3) {
+
+if(typeof d3 === 'undefined' && typeof d3 !== 'Object') {
+  console.log('D3 not found.');
+  return false;
+}
+
 d3.selection.prototype.addClass = function(className) {
     return this.classed(className, true);
 }
@@ -54,7 +63,7 @@ d3.selection.prototype.clear = function() {
   this.selectAll('*').remove();
   return this;
 }
-d3.selection.prototype.css = d3.selection.style;
+d3.selection.prototype.css = d3.selection.prototype.style;
 d3.selection.prototype.eq = function(index) {
   return d3.select(this[0][index]);
 }
@@ -93,9 +102,6 @@ d3.selection.prototype.show = function() {
   this.style('display', 'initial');
   return this;
 }
-d3.selection.prototype.size = function() {
-  return this[0].length;
-}
 d3.selection.prototype.toggle = function() {
   var isHidden = this.style('display') == 'none';
   return this.style('display', isHidden ? 'inherit' : 'none');
@@ -107,3 +113,16 @@ d3.selection.prototype.toggleClass = function(className) {
 d3.selection.prototype.trigger = function(evtName, data) {
   this.on(evtName)(data);
 }
+}
+
+if(typeof module === 'Object' && module.exports) {
+  module.exports = extend;
+}
+else if(typeof define === 'function' && define.amd) {
+  define(['d3'], extend);
+}
+else {
+  extend(d3);
+}
+
+})();
