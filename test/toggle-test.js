@@ -8,7 +8,6 @@ test('toggle element', function(t){
   var testDiv = helper.createDOMwithTestNode()
     .style('display', 'none');
   
-
   t.equal(testDiv.node().style.display, 'none');
     
   testDiv.toggle();
