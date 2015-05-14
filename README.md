@@ -1,6 +1,6 @@
-# d3-query
+# d3-extended
 
-A d3js extension - Use common jQuery functions in your d3 application.
+Extends [D3](http://www.d3js.org) with helpful functions which are similar to the jQuery API.
 
 If you want to get to know more about this project, feel free to read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-jquery-with-d3)
 
@@ -8,26 +8,40 @@ If you want to get to know more about this project, feel free to read the blog p
 
 **npm**
 
+```
+npm install --save d3-extended
+```
+
+usage:
+
+```
+var d3 = require('d3'); //require d3 normally
+require('d3-extended')(d3); //extend d3 with the functions
+```
+
 **bower**
 
-**as d3 plugin**
+```
+bower install --save d3-extended
+```
 
-The dist folder contains two files which you can use as a d3-plugin in your projects:
+**oldschool**
 
 ```
-dist/d3-query.js
-dist/d3-query.min.js
+git clone https://github.com/wbkd/d3-extended.git
 ```
+
+In the folder, you can use the compressed or uncompressed version. To use the plugin, include it after d3 in your HTML:
 
 ```
 <script src="path/to/d3.js"></script>
-<script src="path/to/d3-query-plugin.js"></script>
+<script src="path/to/d3-extended.js"></script>
 ```
 
-### Build from source
+### Build
 
-To build the project run ```gulp build```.
-This will create all needed files in the ```dist``` folder.
+To build the project run ```gulp```.
+This will create all needed files in the root folder.
 
 ## API Documentation
 
