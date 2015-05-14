@@ -1,7 +1,7 @@
 var test = require('tape');
 var helper = require('./helper');
 
-test('remove all children from body', function(t){
+test('clear - remove all children from body', function(t){
 
   t.plan(2);
 

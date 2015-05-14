@@ -1,7 +1,7 @@
 var test = require('tape');
 var helper = require('./helper');
 
-test('display hidden element', function(t){
+test('show - display hidden element', function(t){
 
   t.plan(2);
 

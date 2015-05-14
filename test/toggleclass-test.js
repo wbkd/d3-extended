@@ -1,7 +1,7 @@
 var test = require('tape');
 var helper = require('./helper');
 
-test('toggle class test', function(t){
+test('toggleclass - toggle class test', function(t){
 
   t.plan(3);
 

@@ -1,7 +1,7 @@
 var test = require('tape');
 var helper = require('./helper');
 
-test('add style to element', function(t){
+test('css - add style to element', function(t){
 
   t.plan(1);
 
@@ -12,7 +12,7 @@ test('add style to element', function(t){
   t.equal(testDiv.node().style.background, 'red');
 });
 
-test('add multiple styles to element', function(t){
+test('css - add multiple styles to element', function(t){
 
   t.plan(2);
 

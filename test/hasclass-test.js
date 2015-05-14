@@ -1,7 +1,7 @@
 var test = require('tape');
 var helper = require('./helper');
 
-test('element has certain class', function(t){
+test('hasclass - element has certain class', function(t){
 
   t.plan(1);
 
@@ -11,7 +11,7 @@ test('element has certain class', function(t){
   t.ok(testDiv.hasClass('new-class'));
 });
 
-test('element does not have certain class', function(t){
+test('hasclass - element does not have certain class', function(t){
 
   t.plan(1);
 

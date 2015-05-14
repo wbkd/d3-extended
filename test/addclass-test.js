@@ -1,7 +1,7 @@
 var test = require('tape');
 var helper = require('./helper');
 
-test('class added to element', function(t){
+test('addclass - class added to element', function(t){
 
   t.plan(2);
 
@@ -13,7 +13,7 @@ test('class added to element', function(t){
 
 });
 
-test('two classes added to element', function(t){
+test('addclass - two classes added to element', function(t){
 
   t.plan(3);
 

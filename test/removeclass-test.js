@@ -1,7 +1,7 @@
 var test = require('tape');
 var helper = require('./helper');
 
-test('remove class test', function(t){
+test('removeclass - removes a class', function(t){
 
   t.plan(2);
 

@@ -2,7 +2,7 @@ var test = require('tape');
 var helper = require('./helper');
 var d3Extended = helper.getD3Extended();
 
-test('get size of selection', function(t){
+test('size - get size of selection', function(t){
 
   t.plan(1);
 
@@ -19,7 +19,7 @@ test('get size of selection', function(t){
   t.equal(size, 3);
 });
 
-test('get size of empty selection', function(t){
+test('size - get size of empty selection', function(t){
 
   t.plan(1);
 

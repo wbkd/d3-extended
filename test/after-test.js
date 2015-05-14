@@ -2,7 +2,7 @@ var test = require('tape');
 var helper = require('./helper');
 var d3Extended = helper.getD3Extended();
 
-test('add p node after div', function(t){
+test('after - add p node after div', function(t){
 
   t.plan(1);
 

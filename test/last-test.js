@@ -2,7 +2,7 @@ var test = require('tape');
 var helper = require('./helper');
 var d3Extended = helper.getD3Extended();
 
-test('get last element of a selection', function(t){
+test('last - get last element of a selection', function(t){
 
   t.plan(1);
 
