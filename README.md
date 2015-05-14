@@ -12,12 +12,6 @@ If you want to get to know more about this project, feel free to read the blog p
 npm install --save d3-extended
 ```
 
-usage:
-
-```
-var d3 = require('d3'); //require d3 normally
-require('d3-extended')(d3); //extend d3 with the functions
-```
 
 **bower**
 
@@ -26,18 +20,33 @@ bower install --save d3-extended
 ```
 
 
-**oldschool**
+**git clone**
 
 ```
 git clone https://github.com/wbkd/d3-extended.git
 ```
 
-In the folder, you can use the compressed or uncompressed version. To use the plugin, include it after d3 in your HTML:
+
+### Usage
+
+**CommonJS**
+
+```
+var d3 = require('d3'); //require d3 normally
+require('d3-extended')(d3); //extend d3 with the functions
+```
+
+
+**Oldschool**
+
+You can use the compressed or uncompressed version. 
+To use the plugin, include it after d3 in your HTML:
 
 ```
 <script src="path/to/d3.js"></script>
 <script src="path/to/d3-extended.js"></script>
 ```
+
 
 ### Build
 
