@@ -12,5 +12,5 @@ test('add p node after div', function(t){
 
   var addedNode = d3Extended.select('p').node();
 
-  t.ok(addedNode === document.body.lastChild);
+  t.equal(addedNode, document.body.lastChild);
 });
