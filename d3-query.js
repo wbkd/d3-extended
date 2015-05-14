@@ -2,7 +2,7 @@
 
 var extend = function(d3) {
 
-if(typeof d3 === 'undefined' && typeof d3 !== 'Object') {
+if(typeof d3 === 'undefined' && typeof d3 !== 'object') {
   console.log('D3 not found.');
   return false;
 }
@@ -102,6 +102,9 @@ d3.selection.prototype.show = function() {
   this.style('display', 'initial');
   return this;
 }
+d3.selection.prototype.size = function() {
+  return this[0].length;
+}
 d3.selection.prototype.toggle = function() {
   var isHidden = this.style('display') == 'none';
   return this.style('display', isHidden ? 'inherit' : 'none');
@@ -116,7 +119,6 @@ d3.selection.prototype.trigger = function(evtName, data) {
 }
 
 if(typeof module === 'object' && module.exports) {
-
   module.exports = extend;
 }
 else if(typeof define === 'function' && define.amd) {
