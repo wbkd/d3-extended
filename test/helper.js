@@ -1,9 +1,10 @@
-var d3query = require('../lib/d3-query');
+var d3Extended = require('d3');
+require('../d3-query.js')(d3Extended);
 
 function getEmptyBody(){
   document.body.innerHTML = ''
 
-  return d3query.select('body'); 
+  return d3Extended.select('body'); 
 }
 
 function createDOMwithTestNode(){
@@ -12,7 +13,12 @@ function createDOMwithTestNode(){
     .attr('id', 'test-div');
 }
 
+function getD3Extended(){
+  return d3Extended;
+}
+
 module.exports = {
   createDOMwithTestNode : createDOMwithTestNode,
-  getEmptyBody : getEmptyBody
+  getEmptyBody : getEmptyBody,
+  getD3Extended: getD3Extended
 }

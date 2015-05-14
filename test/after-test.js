@@ -1,6 +1,6 @@
 var test = require('tape');
 var helper = require('./helper');
-var d3query = require('../lib/d3-query');
+var d3Extended = helper.getD3Extended();
 
 test('add p node after div', function(t){
 
@@ -10,7 +10,7 @@ test('add p node after div', function(t){
 
   testDiv.after('p');
 
-  var addedNode = d3query.select('p').node();
+  var addedNode = d3Extended.select('p').node();
 
   t.ok(addedNode === document.body.lastChild);
 });

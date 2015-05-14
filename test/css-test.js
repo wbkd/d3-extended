@@ -1,6 +1,5 @@
 var test = require('tape');
 var helper = require('./helper');
-var d3query = require('../lib/d3-query');
 
 test('add style to element', function(t){
 

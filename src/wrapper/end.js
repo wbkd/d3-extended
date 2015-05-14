@@ -1,6 +1,6 @@
 }
 
-if(typeof module === 'Object' && module.exports) {
+if(typeof module === 'object' && module.exports) {
   module.exports = extend;
 }
 else if(typeof define === 'function' && define.amd) {
