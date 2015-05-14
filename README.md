@@ -53,10 +53,13 @@ This will create all needed files in the ```dist``` folder.
 * [first](#selectionfirst)
 * [last](#selectionlast)
 
-
 #### [Events](#events)
 
 * [trigger](#selectiontrigger)
+
+### [Miscellaneous](#miscellaneous)
+
+* [size](#size)
 
 
 #### [Additional](#additional-functions)
@@ -374,6 +377,25 @@ d3.select(document).on('dataChange', function(data) {
 d3.select(document).trigger('dataChange', {newData: 'HelloWorld!'});
 ```
 
+
+## Miscellaneous
+
+#### size
+
+jQuery equivalent: [$.size](http://api.jquery.com/size/)
+
+Returns the size of the current selection
+
+```
+selection.size();
+```
+
+Example:
+
+```
+d3.selectAll('div').size();
+
+```
 
 ----
 
