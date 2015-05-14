@@ -56,7 +56,7 @@ This will create all needed files in the root folder.
 
 ## API Documentation
 
-#### [DOM Manipualtion](#dom-manipulation)
+#### [DOM Manipulation](#dom-manipulation-1)
 
 * [after](#selectionafter)
 * [before](#selectionbefore)
@@ -72,17 +72,17 @@ This will create all needed files in the root folder.
 * [toggle](#selectiontoggle)
 
 
-#### [Traversing](#traversing)
+#### [Traversing](#traversing-1)
 
 * [eq](#selectioneq)
 * [first](#selectionfirst)
 * [last](#selectionlast)
 
-#### [Events](#events)
+#### [Events](#events-1)
 
 * [trigger](#selectiontrigger)
 
-### [Miscellaneous](#miscellaneous)
+### [Miscellaneous](#miscellaneous-1)
 
 * [size](#size)
 
@@ -91,7 +91,6 @@ This will create all needed files in the root folder.
 
 * [moveToBack](#selectionmoveToBack)
 * [moveToFront](#selectionmoveToFront)
-
 
 
 ## DOM Manipulation
