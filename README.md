@@ -455,3 +455,11 @@ Example:
 ```
 d3.select('svg rect').moveToFront();
 ```
+
+
+----
+
+## Contributers
+
+[moklick](http://www.twitter.com/moklick)
+[chrtze](http://www.twitter.com/chrtze)

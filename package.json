@@ -10,7 +10,8 @@
     "d3",
     "jQuery"
   ],
-  "author": "chrtze",
+  "author": "wbkd",
+  "contributers": ["mo@webkid.io", "chris@webkid.io"],
   "license": "MIT",
   "dependencies": {
     "d3": "^3.5.5"
