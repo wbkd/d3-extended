@@ -8,7 +8,7 @@ if(typeof d3 === 'undefined' && typeof d3 !== 'object') {
 }
 
 d3.selection.prototype.addClass = function(className) {
-    return this.classed(className, true);
+  return this.classed(className, true);
 }
 
 d3.selection.prototype.after = function(tagName) {
@@ -24,9 +24,9 @@ d3.selection.prototype.after = function(tagName) {
 }
 d3.selection.prototype.appendTo = function(selector) {
   var targets = d3.selectAll(selector),
-      targetCount = targets.size(),
-      _this = this,
-      clones = [];
+    targetCount = targets.size(),
+    _this = this,
+    clones = [];
 
   targets.each(function() {
     var currTarget = this;
@@ -71,12 +71,12 @@ d3.selection.prototype.eq = function(findI, findJ) {
 }
 
 d3.selection.prototype.first = function() {
-    // adapted from https://github.com/mbostock/d3/blob/master/src/selection/each.js
-    for (var j = 0, m = this.length; j < m; j++) {
-        for (var group = this[j], i = 0, n = group.length, node; i < n; i++) {
-              if (node = group[i]) return d3.select(node);
-        }
+  // adapted from https://github.com/mbostock/d3/blob/master/src/selection/each.js
+  for (var j = 0, m = this.length; j < m; j++) {
+    for (var group = this[j], i = 0, n = group.length, node; i < n; i++) {
+      if (node = group[i]) return d3.select(node);
     }
+  }
 }
 
 d3.selection.prototype.hasClass = function(className) {
@@ -89,19 +89,19 @@ d3.selection.prototype.hide = function() {
 d3.selection.prototype.last = function() {
   // adapted from https://github.com/mbostock/d3/blob/master/src/selection/each.js
   for (var j = this.length - 1; j >= 0; j--) {
-      for (var group = this[j], i = group.length - 1, node; i >= 0; i--) {
-            if (node = group[i]) return d3.select(node);
-      }
+    for (var group = this[j], i = group.length - 1, node; i >= 0; i--) {
+      if (node = group[i]) return d3.select(node);
+    }
   }
 }
 
 d3.selection.prototype.moveToBack = function() { 
-    return this.each(function() { 
-        var firstChild = this.parentNode.firstChild; 
-        if (firstChild) { 
-            this.parentNode.insertBefore(this, firstChild); 
-        } 
-    });
+  return this.each(function() { 
+    var firstChild = this.parentNode.firstChild; 
+    if (firstChild) { 
+      this.parentNode.insertBefore(this, firstChild); 
+    } 
+  });
 }
 d3.selection.prototype.moveToFront = function() {
   return this.each(function(){
@@ -109,7 +109,7 @@ d3.selection.prototype.moveToFront = function() {
   });
 }
 d3.selection.prototype.removeClass = function(className) {
-    return this.classed(className, false);
+  return this.classed(className, false);
 }
 
 d3.selection.prototype.show = function() {
@@ -121,8 +121,8 @@ d3.selection.prototype.toggle = function() {
   return this.style('display', isHidden ? 'inherit' : 'none');
 }
 d3.selection.prototype.toggleClass = function(className) {
-    this.classed(className, !this.classed(className));
-    return this;
+  this.classed(className, !this.classed(className));
+  return this;
 }
 d3.selection.prototype.trigger = function(evtName, data) {
   this.on(evtName)(data);
