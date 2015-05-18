@@ -1,4 +1,8 @@
 d3.selection.prototype.last = function() {
-  var length = this[0].length;
-  return d3.select(this[0][length-1]);
+  // adapted from https://github.com/mbostock/d3/blob/master/src/selection/each.js
+  for (var j = this.length; j >= 0; j--) {
+      for (var group = this[j], i = group.length, node; i >= 0; i--) {
+            if (node = group[i]) return d3.select(node);
+      }
+  }
 }

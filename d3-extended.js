@@ -24,7 +24,7 @@ d3.selection.prototype.after = function(tagName) {
 }
 d3.selection.prototype.appendTo = function(selector) {
   var targets = d3.selectAll(selector),
-      targetCount = targets[0].length,
+      targetCount = targets.size(),
       _this = this,
       clones = [];
 
@@ -48,6 +48,7 @@ d3.selection.prototype.appendTo = function(selector) {
 
   return clones.length > 0 ? d3.selectAll(clones) : this;
 }
+
 d3.selection.prototype.before = function(tagName) {
   var elements = [];
 
@@ -64,12 +65,20 @@ d3.selection.prototype.clear = function() {
   return this;
 }
 d3.selection.prototype.css = d3.selection.prototype.style;
-d3.selection.prototype.eq = function(index) {
-  return d3.select(this[0][index]);
+d3.selection.prototype.eq = function(findI, findJ) {
+  findJ = findJ || 0;
+  return this.filter(function(d,i,j){return i == findI && j == findJ})
 }
+
 d3.selection.prototype.first = function() {
-  return d3.select(this[0][0]);
+    // adapted from https://github.com/mbostock/d3/blob/master/src/selection/each.js
+    for (var j = 0, m = this.length; j < m; j++) {
+        for (var group = this[j], i = 0, n = group.length, node; i < n; i++) {
+              if (node = group[i]) return d3.select(node);
+        }
+    }
 }
+
 d3.selection.prototype.hasClass = function(className) {
   return this.classed(className);
 }
@@ -78,9 +87,14 @@ d3.selection.prototype.hide = function() {
   return this;
 }
 d3.selection.prototype.last = function() {
-  var length = this[0].length;
-  return d3.select(this[0][length-1]);
+  // adapted from https://github.com/mbostock/d3/blob/master/src/selection/each.js
+  for (var j = this.length; j >= 0; j--) {
+      for (var group = this[j], i = group.length, node; i >= 0; i--) {
+            if (node = group[i]) return d3.select(node);
+      }
+  }
 }
+
 d3.selection.prototype.moveToBack = function() { 
     return this.each(function() { 
         var firstChild = this.parentNode.firstChild; 
@@ -102,9 +116,6 @@ d3.selection.prototype.show = function() {
   this.style('display', 'initial');
   return this;
 }
-d3.selection.prototype.size = function() {
-  return this[0].length;
-}
 d3.selection.prototype.toggle = function() {
   var isHidden = this.style('display') == 'none';
   return this.style('display', isHidden ? 'inherit' : 'none');
@@ -115,6 +126,7 @@ d3.selection.prototype.toggleClass = function(className) {
 }
 d3.selection.prototype.trigger = function(evtName, data) {
   this.on(evtName)(data);
+  return this;
 }
 }
 
