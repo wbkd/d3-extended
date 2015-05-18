@@ -1,3 +1,5 @@
+
+return d3;
 }
 
 if(typeof module === 'object' && module.exports) {
