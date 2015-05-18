@@ -1,8 +1,8 @@
 d3.selection.prototype.appendTo = function(selector) {
   var targets = d3.selectAll(selector),
-      targetCount = targets.size(),
-      _this = this,
-      clones = [];
+    targetCount = targets.size(),
+    _this = this,
+    clones = [];
 
   targets.each(function() {
     var currTarget = this;
