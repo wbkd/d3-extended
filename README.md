@@ -31,9 +31,21 @@ git clone https://github.com/wbkd/d3-extended.git
 
 **CommonJS**
 
+
 ```
 var d3 = require('d3'); //require d3 normally
 require('d3-extended')(d3); //extend d3 with the functions
+```
+
+
+**AMD**
+
+d3 has to defined in the require-config or the file must be in the same folder as d3-extended.js.
+
+```
+requirejs(['d3-extended'], function(d3) {
+  // variable d3 is now extended
+});
 ```
 
 
@@ -45,6 +57,9 @@ To use the plugin, include it after d3 in your HTML:
 ```
 <script src="path/to/d3.js"></script>
 <script src="path/to/d3-extended.js"></script>
+<script>
+  // variable d3 is now extended
+</script>
 ```
 
 
