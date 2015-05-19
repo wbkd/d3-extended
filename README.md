@@ -65,9 +65,13 @@ To use the plugin, include it after d3 in your HTML:
 
 ### Build
 
-
 To build d3-extended run ```gulp```.
-This will create all needed files in the root folder.
+This will create d3-extended.js and a minified version in the root folder.
+
+### Test
+
+To run tests use ```npm test```.
+
 
 ## API Documentation
 
