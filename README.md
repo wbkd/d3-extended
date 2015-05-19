@@ -66,7 +66,7 @@ To use the plugin, include it after d3 in your HTML:
 ### Build
 
 
-To build the project run ```gulp```.
+To build d3-extended run ```gulp```.
 This will create all needed files in the root folder.
 
 ## API Documentation
@@ -246,7 +246,6 @@ Example:
 
 ```
 d3.selectAll('ul').hasClass('active'); 
-
 ```
 
 
@@ -260,7 +259,6 @@ Works in the same way like the D3 style function we only changed the name here.
 ```
 selection.css(name, value);
 selection.css(object);
-
 ```
 
 Example:
@@ -284,14 +282,12 @@ Diplays the current selection. Returns the selection.
 
 ```
 selection.show();
-
 ```
 
 Example:
 
 ```
 d3.selectAll('.foo').show(); 
-
 ```
 
 #### selection.hide
@@ -302,14 +298,12 @@ Hides the current selection. Returns the selection.
 
 ```
 selection.hide();
-
 ```
 
 Example:
 
 ```
 d3.selectAll('.foo').hide(); 
-
 ```
 
 #### selection.toggle
@@ -320,14 +314,12 @@ Diplays or hides the current selection. Returns the selection.
 
 ```
 selection.toggle();
-
 ```
 
 Example:
 
 ```
 d3.selectAll('.foo').toggle(); 
-
 ```
 
 
@@ -338,9 +330,10 @@ d3.selectAll('.foo').toggle();
 jQuery equivalent: [$.eq](http://api.jquery.com/eq/)
 
 Reduces current selection to the element with the passed index. Returns element.
+If you have a nested group, you can also specify the group index, to select a certain group.
 
 ```
-selection.eq(index);
+selection.eq(index[, groupIndex]);
 ```
 
 Example:
@@ -348,7 +341,6 @@ Example:
 ```
 d3.selectAll('li').eq('0'); 
 // returns first li element
-
 ```
 
 
@@ -360,14 +352,12 @@ Reduces the current selection to the first element. Then returns the reduced sel
 
 ```
 selection.first();
-
 ```
 
 Example:
 
 ```
 d3.selectAll('ul').first(); 
-
 ```
 
 
@@ -379,14 +369,12 @@ Reduces the current selection to the last element. Then returns the reduced sele
 
 ```
 selection.last();
-
 ```
 
 Example:
 
 ```
 d3.selectAll('ul').last(); 
-
 ```
 
 ## Events
