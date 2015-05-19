@@ -438,5 +438,6 @@ d3.select('svg rect').moveToFront();
 
 ## Contributers
 
-[moklick](http://www.twitter.com/moklick)
-[chrtze](http://www.twitter.com/chrtze)
+* [moklick](http://www.twitter.com/moklick)
+* [chrtze](http://www.twitter.com/chrtze)
+* [mgold](http://github.com/mgold)
