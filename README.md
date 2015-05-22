@@ -99,6 +99,7 @@ To run tests use ```npm test```.
 
 #### [Events](#events-1)
 
+* [on](#on)
 * [trigger](#selectiontrigger)
 
 
@@ -382,6 +383,27 @@ d3.selectAll('ul').last();
 ```
 
 ## Events
+
+
+#### selection.on
+
+jQuery equivalent: [$.on](http://api.jquery.com/on/)
+
+Works like the normal `on` function but now you can pass multiple event types like you know it from jquery.
+We took this function from the awesome [d3-jetpack](https://github.com/gka/d3-jetpack)
+
+```
+selection.on(types [, listener[, capture]])
+```
+
+Example:
+
+```
+d3.select('li').on('click mouseenter mouseleave', function(d, i) {
+  // do something
+});
+
+```
 
 
 #### selection.trigger
