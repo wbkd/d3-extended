@@ -99,7 +99,7 @@ To run tests use ```npm test```.
 
 #### [Events](#events-1)
 
-* [on](#on)
+* [on](#selectionon)
 * [trigger](#selectiontrigger)
 
 
