@@ -129,7 +129,7 @@ d3.selection.prototype.removeClass = function(className) {
 }
 
 d3.selection.prototype.show = function() {
-  this.style('display', 'initial');
+  this.style('display', '');
   return this;
 }
 d3.selection.prototype.toggle = function() {
