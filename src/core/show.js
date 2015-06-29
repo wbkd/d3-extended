@@ -1,4 +1,4 @@
 d3.selection.prototype.show = function() {
-  this.style('display', 'initial');
+  this.style('display', '');
   return this;
 }
