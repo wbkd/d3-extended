@@ -7,6 +7,9 @@ if(typeof d3 === 'undefined' && typeof d3 !== 'object') {
   return false;
 }
 
+//we need the original on function from d3 for selection.trigger
+var d3_selection_on = d3.selection.prototype.on;
+
 d3.selection.prototype.addClass = function(className) {
   return this.classed(className, true);
 }
@@ -109,9 +112,6 @@ d3.selection.prototype.moveToFront = function() {
   });
 }
 // taken from the awesome https://github.com/gka/d3-jetpack/blob/master/d3-jetpack.js#L138
-
-var d3_selection_on = d3.selection.prototype.on;
-
 d3.selection.prototype.on = function(type, listener, capture) {
   if (typeof type === 'string' && type.indexOf(' ') > -1) {
     var types = type.split(' ');
@@ -153,7 +153,7 @@ d3.selection.prototype.toggleClass = function(className) {
   return this;
 }
 d3.selection.prototype.trigger = function(evtName, data) {
-  this.on(evtName)(data);
+  d3_selection_on.apply(this, [evtName])(data);
   return this;
 }
 
