@@ -9,4 +9,3 @@ if(typeof d3 === 'undefined' && typeof d3 !== 'object') {
 
 //we need the original on function from d3 for selection.trigger
 var d3_selection_on = d3.selection.prototype.on;
-d3.selection.prototype.on_original = d3.selection.prototype.on;
