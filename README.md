@@ -430,6 +430,7 @@ d3.select('li').on('click mouseenter mouseleave', function(d, i) {
 
 jQuery equivalent: [$.trigger](http://api.jquery.com/trigger/)
 
+Note: Currently in development, see issues.
 Triggers custom events on a selection.
 
 ```
