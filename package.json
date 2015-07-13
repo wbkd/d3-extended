@@ -1,6 +1,6 @@
 {
   "name": "d3-extended",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "d3-extended extends d3 with some common jQuery functions.",
   "main": "./d3-extended.js",
   "scripts": {
