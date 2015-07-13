@@ -9,6 +9,7 @@ if(typeof d3 === 'undefined' && typeof d3 !== 'object') {
 
 //we need the original on function from d3 for selection.trigger
 var d3_selection_on = d3.selection.prototype.on;
+d3.selection.prototype.on_original = d3.selection.prototype.on;
 
 d3.selection.prototype.addClass = function(className) {
   return this.classed(className, true);
@@ -153,7 +154,7 @@ d3.selection.prototype.toggleClass = function(className) {
   return this;
 }
 d3.selection.prototype.trigger = function(evtName, data) {
-  d3_selection_on.apply(this, [evtName])(data);
+  this.on_original(evtName)(data);
   return this;
 }
 
