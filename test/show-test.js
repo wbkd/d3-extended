@@ -13,5 +13,6 @@ test('show - display hidden element', function(t){
     
   testDiv.show();
 
-  t.equal(testDiv.node().style.display, 'initial');
+  //the element should now have the display property removed
+  t.equal(testDiv.node().style.display, '');
 });
