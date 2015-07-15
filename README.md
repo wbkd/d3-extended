@@ -255,7 +255,8 @@ selection.toggleClass(className);
 Example:
 
 ```
-d3.selectAll('ul').toggleClass('active');  
+d3.selectAll('ul').toggleClass('active');
+d3.selectAll('ul').toggleClass('class-a class-b'); //toggle multiple classes  
 ```
 
 
