@@ -220,7 +220,8 @@ selection.addClass(className);
 Example:
 
 ```
-d3.selectAll('ul').addClass('active');  
+d3.selectAll('ul').addClass('active');
+d3.selectAll('ul').addClass('class-a class-b'); //will add two classes
 ```
 
 #### selection.removeClass
@@ -236,7 +237,8 @@ selection.removeClass(className);
 Example:
 
 ```
-d3.selectAll('ul').removeClass('active');  
+d3.selectAll('ul').removeClass('active');
+d3.selectAll('ul').removeClass('class-a class-b'); //will remove two classes
 ```
 
 

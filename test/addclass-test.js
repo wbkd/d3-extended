@@ -18,8 +18,7 @@ test('addclass - two classes added to element', function(t){
   t.plan(3);
 
   var testDiv = helper.createDOMwithTestNode()
-    .addClass('new-class')
-    .addClass('new-class-a');
+    .addClass('new-class new-class-a');
 
   t.ok(testDiv.classed('new-class'));
   t.ok(testDiv.classed('new-class-a'));

@@ -9,8 +9,8 @@ if(typeof d3 === 'undefined' && typeof d3 !== 'object') {
 
 //we need the original on function from d3 for selection.trigger
 var d3_selection_on = d3.selection.prototype.on;
-d3.selection.prototype.addClass = function(className) {
-  return this.classed(className, true);
+d3.selection.prototype.addClass = function(classNames) {
+  return this.classed(classNames, true);
 }
 
 d3.selection.prototype.after = function(tagName) {
@@ -139,8 +139,8 @@ d3.selection.prototype.prepend = function(tagName) {
 
   return d3.selectAll(elements);
 }
-d3.selection.prototype.removeClass = function(className) {
-  return this.classed(className, false);
+d3.selection.prototype.removeClass = function(classNames) {
+  return this.classed(classNames, false);
 }
 
 d3.selection.prototype.show = function() {
@@ -151,8 +151,13 @@ d3.selection.prototype.toggle = function() {
   var isHidden = this.style('display') == 'none';
   return this.style('display', isHidden ? 'inherit' : 'none');
 }
-d3.selection.prototype.toggleClass = function(className) {
-  this.classed(className, !this.classed(className));
+d3.selection.prototype.toggleClass = function(classNames) {
+  var classes = classNames.split(' ');
+
+  for(var i = 0; i < classes.length;i++) {
+    var c = classes[i];
+    this.classed(c, !this.classed(c));
+  }
   return this;
 }
 d3.selection.prototype.trigger = function(evtName, data) {
