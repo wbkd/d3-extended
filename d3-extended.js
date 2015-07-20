@@ -6,9 +6,6 @@ if(typeof d3 === 'undefined' && typeof d3 !== 'object') {
   console.log('D3 not found.');
   return false;
 }
-
-//we need the original on function from d3 for selection.trigger
-var d3_selection_on = d3.selection.prototype.on;
 d3.selection.prototype.addClass = function(classNames) {
   return this.classed(classNames, true);
 }
@@ -110,11 +107,10 @@ d3.selection.prototype.moveToFront = function() {
     this.parentNode.appendChild(this);
   });
 }
-d3.selection.prototype.trigger = function(evtName, data) {
-  d3_selection_on.apply(this, [evtName])(data);
-}
-
 // taken from the awesome https://github.com/gka/d3-jetpack/blob/master/d3-jetpack.js#L138
+// we need the original on function from d3 for selection.trigger
+
+var d3_selection_on = d3.selection.prototype.on;
 d3.selection.prototype.on = function(type, listener, capture) {
   if (typeof type === 'string' && type.indexOf(' ') > -1) {
     var types = type.split(' ');
@@ -161,17 +157,8 @@ d3.selection.prototype.toggleClass = function(classNames) {
   return this;
 }
 d3.selection.prototype.trigger = function(evtName, data) {
-  //we now use the jQuery implementation as d3.selection.on is used differently.
-  if (window.CustomEvent) {
-    var event = new CustomEvent(evtName, {detail: data});
-  } else {
-    var event = document.createEvent('CustomEvent');
-    event.initCustomEvent(evtName, true, true, data);
-  }
-
-  this.node().dispatchEvent(event);
-
-  return this;
+  d3_selection_on.apply(this, [evtName])(data);
+   return this;
 }
 
 return d3;
