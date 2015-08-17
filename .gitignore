@@ -1,0 +1,5 @@
+.npmrc
+node_modules
+*.log
+test.js
+
