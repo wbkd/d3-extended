@@ -1,8 +1,9 @@
-# d3-extended
+# [d3.js Extended](http://wbkd.github.io/d3-extended/)
 
 Extends [D3](http://www.d3js.org) with helpful functions which are similar to the jQuery API.
 
-If you want to get to know more about this project, feel free to read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-jquery-with-d3)
+If you want to get to know more about this project, feel free to read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-jquery-with-d3).
+
 
 ### Installation
 
