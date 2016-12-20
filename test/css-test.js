@@ -1,28 +1,28 @@
-var test = require('tape');
-var helper = require('./helper');
+const tape = require("tape"),
+      d3 = require("../")
+      jsdom = require("jsdom");
 
-test('css - add style to element', function(t){
 
-  t.plan(1);
+      tape('css - add style to element', test => {
+        const document = jsdom.jsdom(`<body><div id="test-div"></div></body>`);
+        const testDiv = d3.select(document).select('#test-div');
+        testDiv.css('background', 'red');
 
-  var testDiv = helper.createDOMwithTestNode();
+        test.equal(testDiv.node().style.background, 'red');
 
-  testDiv.css('background', 'red');
+        test.end();
+      });
 
-  t.equal(testDiv.node().style.background, 'red');
-});
 
-test('css - add multiple styles to element', function(t){
+      tape('css - add multiple styles to element', test => {
+        const document = jsdom.jsdom(`<body><div id="test-div"></div></body>`);
+        const testDiv = d3.select(document).select('#test-div');
+        testDiv.css({
+          background:  'red',
+          color : 'yellow'
+        });
 
-  t.plan(2);
-
-  var testDiv = helper.createDOMwithTestNode();
-
-  testDiv.css({
-    background:  'red',
-    color : 'yellow'
-  });
-
-  t.equal(testDiv.node().style.background, 'red');
-  t.equal(testDiv.node().style.color, 'yellow');
-});
+        test.equal(testDiv.node().style.background, 'red');
+        test.equal(testDiv.node().style.color, 'yellow');
+        test.end();
+      });

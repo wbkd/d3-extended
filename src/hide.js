@@ -1,4 +1,6 @@
-d3.selection.prototype.hide = function() {
+var hide = function() {
   this.style('display', 'none');
   return this;
 }
+
+export default hide

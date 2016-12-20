@@ -1,11 +1,12 @@
-var test = require('tape');
-var helper = require('./helper');
+const tape = require("tape"),
+      d3 = require("../")
+      jsdom = require("jsdom");
 
-test('hide - hide element', function(t){
 
-  t.plan(1);
+      tape('hide - hide element', test => {
+        var document = jsdom.jsdom('<body><div class="test-class"></div></body>')
+        var testDiv = d3.select(document).select('div').hide();
 
-  var testDiv = helper.createDOMwithTestNode().hide();
-
-  t.equal(testDiv.node().style.display, 'none');
-});
+        test.equal(testDiv.node().style.display, 'none');
+        test.end();
+      });

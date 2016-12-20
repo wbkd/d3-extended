@@ -1,8 +1,11 @@
+var d3 = require ('d3-selection');
+
 //the same as append, but inserting the element before the first element in the container
-d3.selection.prototype.prepend = function(tagName) {
+var prepend = function(tagName) {
   var elements = [];
 
   this.each(function() {
+    var document = this.ownerDocument;
     var element = document.createElement(tagName);
     this.insertBefore(element, this.firstChild);
     elements.push(element);
@@ -10,3 +13,5 @@ d3.selection.prototype.prepend = function(tagName) {
 
   return d3.selectAll(elements);
 }
+
+export default prepend

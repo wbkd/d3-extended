@@ -1,26 +1,33 @@
-var test = require('tape');
-var helper = require('./helper');
+const tape = require("tape"),
+    d3 = require("../")
+    jsdom = require("jsdom");
 
-test('addclass - class added to element', function(t){
 
-  t.plan(2);
+    tape('addclass - class added to element', test => {
 
-  var testDiv = helper.createDOMwithTestNode()
-    .addClass('new-class');
+      const document = jsdom.jsdom(
+        `<body>
+          <h1 class='c1 c2'>hello</h1>
+          <h1 class='c3'></h1>
+        </body>`);
+      const body = d3.select(document).select('body').addClass("c3");
 
-  t.ok(testDiv.classed('new-class'));
-  t.equal(testDiv.node().classList.length, 1);
+      test.ok(body.classed('c3'));
+      test.equal(body.node().classList.length, 1);
+      test.end();
+    });
 
-});
+    tape('addclass - two classes added to element', test => {
 
-test('addclass - two classes added to element', function(t){
+      const document = jsdom.jsdom(
+        `<body>
+          <h1 class='c1 c2'>hello</h1>
+          <h1 class='c3'></h1>
+        </body>`);
+      const body = d3.select(document).select("body").addClass("c3 c4");
 
-  t.plan(3);
-
-  var testDiv = helper.createDOMwithTestNode()
-    .addClass('new-class new-class-a');
-
-  t.ok(testDiv.classed('new-class'));
-  t.ok(testDiv.classed('new-class-a'));
-  t.equal(testDiv.node().classList.length, 2);
-});
+      test.ok(body.classed('c3'));
+      test.ok(body.classed('c4'));
+      test.equal(body.node().classList.length, 2);
+      test.end();
+    });

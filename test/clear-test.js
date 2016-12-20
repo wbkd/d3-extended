@@ -1,20 +1,16 @@
-var test = require('tape');
-var helper = require('./helper');
+const tape = require("tape"),
+      d3 = require("../")
+      jsdom = require("jsdom");
 
-test('clear - remove all children from body', function(t){
 
-  t.plan(2);
+      tape('clear - remove all children from body', test => {
+        const document = jsdom.jsdom(`<body><div></div><div></div><div></div></body>`);
+        const body = d3.select(document).select('body');
+        test.equal(body.node().childNodes.length, 3 );
 
-  var body = helper.getEmptyBody();
-  
-  body.selectAll('div')
-    .data([1,2,3,4,5])
-    .enter()
-    .append('div');
-  
-  t.equal(body.node().childNodes.length, 5);
-    
-  body.clear();
+        body.clear();
 
-  t.equal(body.node().childNodes.length, 0);
-});
+        test.equal(body.node().childNodes.length, 0);
+
+        test.end();
+      });

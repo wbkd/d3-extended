@@ -1,32 +1,28 @@
-var test = require('tape');
-var helper = require('./helper');
+const tape = require("tape"),
+      d3 = require("../")
+      jsdom = require("jsdom");
 
-test('removeclass - removes a class', function(t){
 
-  t.plan(2);
+      tape('removeclass - removes a class', test => {
+        var document = jsdom.jsdom('<body><div class="test-class"></div></body>')
+        var testDiv = d3.select(document).select('div');
+        test.ok(testDiv.classed('test-class'));
 
-  var testDiv = helper.createDOMwithTestNode()
-    .classed('new-class', true);
+        testDiv.removeClass('test-class');
 
-  t.ok(testDiv.classed('new-class'));
+        test.notOk(testDiv.classed('test-class'));
+        test.end();
+      });
 
-  testDiv.removeClass('new-class');
+      tape('removeclass - remove multiple classes', test => {
+        var document = jsdom.jsdom('<body><div class="test-class test-class-2"></div></body>')
+        var testDiv = d3.select(document).select('div');
+        test.ok(testDiv.classed('test-class'));
+        test.ok(testDiv.classed('test-class-2'));
 
-  t.notOk(testDiv.classed('new-class'));
+        testDiv.removeClass('test-class test-class-2');
 
-});
-
-test('removeclass - remove multiple classes', function(t){
-
-  t.plan(2);
-
-  var testDiv = helper.createDOMwithTestNode()
-    .classed('new-class new-class-a', true);
-
-  t.ok(testDiv.classed('new-class'));
-
-  testDiv.removeClass('new-class new-class-a');
-
-  t.notOk(testDiv.classed('new-class'));
-
-});
+        test.notOk(testDiv.classed('test-class'));
+        test.notOk(testDiv.classed('test-class-2'));
+        test.end();
+      });

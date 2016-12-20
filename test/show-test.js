@@ -1,18 +1,16 @@
-var test = require('tape');
-var helper = require('./helper');
+const tape = require("tape"),
+      d3 = require("../")
+      jsdom = require("jsdom");
 
-test('show - display hidden element', function(t){
 
-  t.plan(2);
+      tape('show - show element', test => {
+        const document = jsdom.jsdom('<body><div style="display:none"></div></body>')
 
-  var testDiv = helper.createDOMwithTestNode()
-    .style('display', 'none');
-  
+        const testDiv = d3.select(document).select('div')
+        test.equal(testDiv.node().style.display, 'none');
 
-  t.equal(testDiv.node().style.display, 'none');
-    
-  testDiv.show();
+        testDiv.show();
 
-  //the element should now have the display property removed
-  t.equal(testDiv.node().style.display, '');
-});
+        test.equal(testDiv.node().style.display, '');
+        test.end();
+      });

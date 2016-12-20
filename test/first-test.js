@@ -1,20 +1,13 @@
-var test = require('tape');
-var helper = require('./helper');
-var d3Extended = helper.getD3Extended();
+const tape = require("tape"),
+      d3 = require("../")
+      jsdom = require("jsdom");
 
-test('first - get first element of a selection', function(t){
 
-  t.plan(1);
+      tape('first - get first element of a selection', test => {
+        var document = jsdom.jsdom('<body><div id="a"></div><div id="b"></div><div id="c"></div></body>')
 
-  var firstElement = helper.getEmptyBody()
-    .selectAll('div')
-    .data(['a','b','c'])
-    .enter()
-    .append('div')
-    .attr('id', function(d, i){
-      return 'test-' + d;
-    })
-    .first();
-  
-  t.equal(firstElement.attr('id'), 'test-a');
-});
+        var first = d3.select(document).selectAll('div').first();
+
+        test.equal(first.attr('id'), 'a');
+        test.end();
+      });

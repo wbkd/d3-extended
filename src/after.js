@@ -1,7 +1,11 @@
-d3.selection.prototype.after = function(tagName) {
+var d3 = require ('d3-selection');
+
+var after = function(tagName) {
   var elements = [];
 
   this.each(function() {
+
+    var document = this.ownerDocument;
     var element = document.createElement(tagName);
     this.parentNode.insertBefore(element, this.nextSibling);
     elements.push(element);
@@ -9,3 +13,5 @@ d3.selection.prototype.after = function(tagName) {
 
   return d3.selectAll(elements);
 }
+
+export default after;

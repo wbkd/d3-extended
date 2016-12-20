@@ -1,16 +1,13 @@
-var test = require('tape');
-var helper = require('./helper');
-var d3Extended = helper.getD3Extended();
+const tape = require("tape"),
+      d3 = require("../")
+      jsdom = require("jsdom");
 
-test('prepend - prepend p node inside div', function(t){
 
-  t.plan(1);
-
-  var testDiv = helper.createDOMwithTestNode();
-  testDiv.append('span'); //some inner node to test if element is inserted before
-  testDiv.prepend('p');
-
-  var addedNode = d3Extended.select('p').node();
-
-  t.equal(addedNode, testDiv.node().firstChild);
-});
+      tape('prepend - prepend p node inside div', test => {
+        var document = jsdom.jsdom('<body><div><span></span></div></body>')
+        var testDiv = d3.select(document).select('div');
+        testDiv.prepend('p');
+        console.log(document.documentElement.innerHTML);
+        test.equal(document.documentElement.innerHTML, '<head></head><body><div><p></p><span></span></div></body>' )
+        test.end();
+      });

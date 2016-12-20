@@ -1,32 +1,22 @@
-var test = require('tape');
-var helper = require('./helper');
-var d3Extended = helper.getD3Extended();
+const tape = require("tape"),
+      d3 = require("../")
+      jsdom = require("jsdom");
 
-test('eq - get first element of a selection', function(t){
 
-  t.plan(1);
+      tape('eq - get first element of a selection', test => {
+        var document = jsdom.jsdom('<body><div id="a"></div><div id="b"></div><div id="c"></div></body>')
 
-  var firstElement = createDivs(['a','b','c']).eq(0);
-  
-  t.equal(firstElement.attr('id'), 'test-a');
-});
+        var firstElement = d3.select(document).selectAll('div').eq(0);
 
-test('eq - get second element of a selection', function(t){
+        test.equal(firstElement.attr('id'), 'a');
+        test.end();
+      });
 
-  t.plan(1);
+      tape('eq - get second element of a selection', test => {
+        var document = jsdom.jsdom('<body><div id="a"></div><div id="b"></div><div id="c"></div></body>')
 
-  var secondElement = createDivs(['m','n','o']).eq(1);
-  
-  t.equal(secondElement.attr('id'), 'test-n');
-});
+        var firstElement = d3.select(document).selectAll('div').eq(1);
 
-function createDivs(data){
-  return helper.getEmptyBody()
-    .selectAll('div')
-    .data(data)
-    .enter()
-    .append('div')
-    .attr('id', function(d, i){
-      return 'test-' + d;
-    });
-}
+        test.equal(firstElement.attr('id'), 'b');
+        test.end();
+      });

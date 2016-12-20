@@ -1,16 +1,15 @@
-var test = require('tape');
-var helper = require('./helper');
-var d3Extended = helper.getD3Extended();
+const tape = require("tape"),
+    d3 = require("../")
+    jsdom = require("jsdom");
 
-test('after - add p node after div', function(t){
 
-  t.plan(1);
+    tape('after - add p node after div', test => {
 
-  var testDiv = helper.createDOMwithTestNode();
+      const document = jsdom.jsdom(`<body><div id='test-div'></div></body>`);
+      const testDiv = d3.select(document).select('#test-div');
+      testDiv.after('p');
+      const addedNode = d3.select(document).select('p').node();
 
-  testDiv.after('p');
-
-  var addedNode = d3Extended.select('p').node();
-
-  t.equal(addedNode, document.body.lastChild);
-});
+      test.equal(addedNode, document.body.lastChild);
+      test.end();
+    });

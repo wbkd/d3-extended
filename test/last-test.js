@@ -1,20 +1,12 @@
-var test = require('tape');
-var helper = require('./helper');
-var d3Extended = helper.getD3Extended();
+const tape = require("tape"),
+      d3 = require("../")
+      jsdom = require("jsdom");
 
-test('last - get last element of a selection', function(t){
 
-  t.plan(1);
+      tape('hide - hide element', test => {
+        var document = jsdom.jsdom('<body><div id="a"></div><div id="b"></div><div id="c"></div></body>')
+        var last = d3.select(document).selectAll('div').last();
 
-  var lastElement = helper.getEmptyBody()
-    .selectAll('div')
-    .data(['a','b','c'])
-    .enter()
-    .append('div')
-    .attr('id', function(d, i){
-      return 'test-' + d;
-    })
-    .last();
-  
-  t.equal(lastElement.attr('id'), 'test-c');
-});
+        test.equal(last.attr('id'), 'c');
+        test.end();
+      });

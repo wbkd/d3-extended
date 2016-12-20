@@ -1,21 +1,12 @@
-var test = require('tape');
-var helper = require('./helper');
+const tape = require("tape"),
+      d3 = require("../")
+      jsdom = require("jsdom");
 
-test('hasclass - element has certain class', function(t){
 
-  t.plan(1);
+      tape('hasclass - element has certain class', test => {
+        var document = jsdom.jsdom('<body><div class="test-class"></div></body>')
+        var testDiv = d3.select(document).select('div');
 
-  var testDiv = helper.createDOMwithTestNode()
-    .classed('new-class', true);
-  
-  t.ok(testDiv.hasClass('new-class'));
-});
-
-test('hasclass - element does not have certain class', function(t){
-
-  t.plan(1);
-
-  var testDiv = helper.createDOMwithTestNode();
-  
-  t.notOk(testDiv.hasClass('not-existing-class'));
-});
+        test.ok(testDiv.hasClass('test-class'));
+        test.end();
+      });

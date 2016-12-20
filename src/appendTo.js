@@ -1,4 +1,6 @@
-d3.selection.prototype.appendTo = function(selector) {
+var d3 = require ('d3-selection');
+
+var appendTo = function(selector) {
   var targets = d3.selectAll(selector),
     targetCount = targets.size(),
     _this = this,
@@ -24,3 +26,5 @@ d3.selection.prototype.appendTo = function(selector) {
 
   return clones.length > 0 ? d3.selectAll(clones) : this;
 }
+
+export default appendTo;

@@ -1,17 +1,11 @@
-var test = require('tape');
-var helper = require('./helper');
-var d3Extended = helper.getD3Extended();
+const tape = require("tape"),
+      d3 = require("../")
+      jsdom = require("jsdom");
 
-test('before - add p node before div', function(t){
 
-  t.plan(1);
-
-  var testDiv = helper.createDOMwithTestNode();
-
-  testDiv.before('p');
-
-  var addedNode = d3Extended.select('p').node();
-
-  t.ok(addedNode === document.body.firstChild);
-
-});
+    tape('before - add p node before div', test => {
+      const document = jsdom.jsdom(`<body><div></div></body>`);
+      d3.select(document).select('div').before('p');
+      test.equal(document.documentElement.innerHTML, '<head></head><body><p></p><div></div></body>' )
+      test.end();
+    });

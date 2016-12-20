@@ -1,5 +1,4 @@
-node_modules
 .DS_Store
-*.log
-test.js
-.npmrc
+build/
+node_modules
+npm-debug.log
