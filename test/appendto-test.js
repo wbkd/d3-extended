@@ -3,14 +3,14 @@ const tape = require("tape"),
     jsdom = require("jsdom");
 
 
-    tape('appendTo - append p node to div', test => {
+    tape('appendTo - append new node to div', test => {
 
       const document = jsdom.jsdom(`<body><div id='test-div'></div></body>`);
       const div = d3.select(document).select('#test-div');
-      div.append("p");
+      const p = d3.select(document.createElement("p"));
+      p.appendTo(div);
 
       var content = document.documentElement.innerHTML;
-      console.log(content);
       test.equal(document.documentElement.innerHTML, '<head></head><body><div id="test-div"><p></p></div></body>' )
 
       test.end();

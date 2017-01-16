@@ -1,10 +1,11 @@
 var d3 = require ('d3-selection');
 
-var appendTo = function(selector) {
-  var targets = d3.selectAll(selector),
+var appendTo = function(selection) {
+  var targets = selection,
     targetCount = targets.size(),
     _this = this,
     clones = [];
+
 
   targets.each(function() {
     var currTarget = this;
