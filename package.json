@@ -1,24 +1,24 @@
 {
-  "name": "d3-foo",
-  "version": "0.0.1",
-  "description": "{DESCRIPTION}",
+  "name": "d3-extended",
+  "version": "0.0.2",
+  "description": "Extends D3 with helpful functions which are similar to the jQuery API.",
   "keywords": [
     "d3",
     "d3-module"
   ],
   "license": "BSD-3-Clause",
-  "main": "build/d3-foo.js",
+  "main": "build/d3-extended.js",
   "jsnext:main": "index",
-  "homepage": "https://github.com/{USERNAME}/d3-foo",
+  "homepage": "https://github.com/wbkd/d3-extended",
   "repository": {
     "type": "git",
-    "url": "https://github.com/{USERNAME}/d3-foo.git"
+    "url": "https://github.com/wbkd/d3-extended.git"
   },
   "scripts": {
-    "pretest": "rm -rf build && mkdir build && rollup -f umd -g d3-selection:d3 -n d3 -o build/d3-foo.js -- index.js",
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -g d3-selection:d3 -n d3 -o build/d3-extended.js -- index.js",
     "test": "tape 'test/**/*-test.js'",
-    "prepublish": "npm run test && uglifyjs build/d3-foo.js -c -m -o build/d3-foo.min.js",
-    "postpublish": "zip -j build/d3-foo.zip -- LICENSE README.md build/d3-foo.js build/d3-foo.min.js"
+    "prepublish": "npm run test && uglifyjs build/d3-extended.js -c -m -o build/d3-extended.min.js",
+    "postpublish": "zip -j build/d3-extended.zip -- LICENSE README.md build/d3-extended.js build/d3-extended.min.js"
   },
   "dependencies": {
     "d3-selection": "^1.0.3"
