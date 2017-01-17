@@ -1,4 +1,3 @@
-//d3.selection.prototype.css = d3.selection.prototype.style;
 var css = function(prop, value){
   if(value){
     this.style(prop, value);

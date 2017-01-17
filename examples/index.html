@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  body {
+    font-family: Verdana;
+  }
+
+  .test{
+    width:160px;
+    height:160px;
+    float:left;
+  }
+
+  .test div:first-child{
+    background: #baffc9;
+    margin:5px;
+    padding:5px;
+  }
+
+  .test div:nth-child(2){
+    background: #bae1ff;
+    margin:5px;
+    padding:5px;
+  }
+
+  .clear {
+    clear:both;
+    position:relative;
+  }
+
+  .one{
+    background: #ffb3ba;
+  }
+
+  .two{
+    background: #ffdfba;
+  }
+
+  .three {
+    background: #ffffba;
+  }
+
+  #movefront1, #movefront2{
+    position: absolute;
+    width:100px;
+    height:100px;
+
+  }
+
+  #moveback1, #moveback2{
+    position: absolute;
+    width:100px;
+    height:100px;
+
+  }
+
+
+  .container {
+    position: relative;
+    height: 100px;
+    width: 100%;
+  }
+
+
+</style>
+<body>
+  <h1 id="header1">
+    Change CSS
+  </h1>
+  <div class="test one" id="css1">CSS1</div>
+  <div class="test two" id="css2">CSS2</div>
+  <div class="test three" id="css3">CSS3</div>
+  <div class="clear"></div>
+  <button id="css-button">Change Style</button>
+
+  <h1 id="header2">
+    Select First Element in Selection
+  </h1>
+  <div class="test first one" id="first1">First1
+    <div class="first">
+      Inner Div 1/1
+    </div>
+    <div class="first">
+      Inner Div 1/2
+    </div>
+  </div>
+  <div class="test first two" id="first2">First2
+    <div class="first">
+      Inner Div 2/1
+    </div>
+    <div class="first">
+      Inner Div 2/2
+    </div></div>
+  <div class="test first three" id="first3">First3
+    <div class="first">
+      Inner Div 3/1
+    </div>
+    <div class="first">
+      Inner Div 3/2
+    </div></div>
+  <div class="clear"></div>
+  <button id="first-button">Select First</button>
+  <div>First Element ID D3: <span id="first-result"></span></div>
+  <div>First Element ID jQuery: <span id="first-result-jq"></span></div>
+
+
+
+  <h1 id="header3">
+    Select Last Element in Selection
+  </h1>
+  <div class="test last one" id="last1">Last1
+    <div class="last">
+      Inner Div 1/1
+    </div>
+    <div class="last">
+      Inner Div 1/2
+    </div></div>
+  <div class="test last two" id="last2">Last2
+    <div class="last">
+      Inner Div 2/1
+    </div>
+    <div class="last">
+      Inner Div 2/2
+    </div>
+  </div>
+  <div class="test last three" id="last3">Last3
+    <div class="last">
+      Inner Div 3/1
+    </div>
+    <div class="last">
+      Inner Div 3/2
+      <div class="last">
+        InnerInner Div 3/2/1
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <button id="last-button">Select Last</button>
+  <div>Last Element ID D3: <span id="last-result"></span></div>
+  <div>Last Element ID jQuery: <span id="last-result-jq"></span></div>
+
+
+  <h1 id="header4">
+    Select Element .eq()
+  </h1>
+  <div class="test one eq" id="eq1">EQ1
+    <div class="eq" id="eq11">
+      Inner Div 1/1
+    </div>
+    <div class="eq" id="eq12">
+      Inner Div 1/2
+    </div>
+  </div>
+  <div class="test two eq" id="eq2">EQ2
+    <div class="eq" id="eq21">
+      Inner Div 2/1
+    </div>
+    <div class="eq" id="eq22">
+      Inner Div 2/2
+    </div>
+  </div>
+  <div class="test three eq" id="eq3">EQ3
+    <div class="eq" id="eq31">
+      Inner Div 3/1
+    </div>
+    <div class="eq" id="eq32">
+      Inner Div 3/2
+    </div>
+  </div>
+  <div class="clear"></div>
+  <button id="eq-button">Select .eq()</button>
+  <div>EQ Result D3: <span id="eq-result"></span></div>
+  <div>EQ Result jQuery: <span id="eq-result-jq"></span></div>
+
+  <h1 id="header5">
+    Trigger
+  </h1>
+  <div class="test one" id="trigger1">Trigger 1</div>
+  <div class="test two" id="trigger2">Trigger2</div>
+  <div class="clear"></div>
+  <div id="counter"></div>
+
+
+  <h1 id="header6">
+    MoveToFront
+  </h1>
+  <div class="container">
+    <div class="one" id="movefront1">To Front</div>
+    <div class="three" id="movefront2">To Back</div>
+
+  </div>
+<div class="clear"></div>
+
+
+
+  <h1 id="header6">
+    MoveToFront
+  </h1>
+  <div class="container">
+    <div class="one" id="moveback1">To Front</div>
+    <div class="three" id="moveback2">To Back</div>
+  </div>
+
+  <div class="clear"></div>
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="d3-extended.js"></script>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+
+  // CSS Example
+  d3.select('#css-button')
+    .on('click', function(){
+      d3.select('#css1').css('background', 'blue');
+      d3.select('#css3').css({background: 'red', 'font-size':'10px'});
+    });
+
+  // First Example
+  d3.select('#first-button')
+    .on('click', function(){
+      var first = d3.selectAll('.first').first();
+      d3.select("#first-result").text(first.attr('id'));
+      d3.select("#first-result-jq").text($('.first').first().attr('id'));
+    });
+
+
+  // Last Example
+  d3.select('#last-button')
+    .on('click', function(){
+      var last = d3.selectAll('.last').last();
+      d3.select("#last-result").text(last.text());
+      d3.select("#last-result-jq").text($('.last').last().text());
+    });
+
+
+  // Equals Example
+  d3.select('#eq-button')
+    .on('click', function(){
+      var eq = d3.selectAll('.eq').eq(6);
+      d3.select("#eq-result").text(eq.attr('id'));
+      d3.select("#eq-result-jq").text($('.eq').eq(6).attr('id'));
+    });
+
+
+  //Trigger example
+  //TODO: not working :(
+  var count = 0;
+  var trigger1 = d3.select('#trigger1').on('click', function(){
+    count++;
+    d3.select('#counter').text(count);
+  });
+
+  d3.select('#trigger2').on('click', function(){
+    console.log("trigger2");
+    trigger1.trigger('click');
+  });
+
+
+  // MoveToFront Example
+  d3.select('#movefront1').moveToFront();
+
+  // MoveToBack Example
+  d3.select('#moveback2').moveToBack();
+
+
+
+
+</script>
+</body>

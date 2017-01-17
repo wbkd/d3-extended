@@ -23,10 +23,9 @@ const tape = require("tape"),
         }
 
 
-        //simulateClick(a);
 
         //why so often?!?!?
-        //a.trigger('click');
+        a.trigger('click');
 
         test.end();
       });

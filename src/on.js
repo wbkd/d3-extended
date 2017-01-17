@@ -1,6 +1,6 @@
 // taken from the awesome https://github.com/gka/d3-jetpack/blob/master/d3-jetpack.js#L138
 // we need the original on function from d3 for selection.trigger
-var d3 = require ('d3-selection');
+import {default as d3} from "d3-selection";
 
 var d3_selection_on = d3.selection.prototype.on;
 var on = function(type, listener, capture) {

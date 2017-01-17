@@ -1,4 +1,4 @@
-var d3 = require ('d3-selection');
+import {default as d3} from "d3-selection";
 
 //the same as append, but inserting the element before the first element in the container
 var prepend = function(tagName) {
