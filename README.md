@@ -408,7 +408,7 @@ d3.selectAll('ul').last();
 
 ## Events
 
-<!--
+
 #### selection.on
 
 jQuery equivalent: [$.on](http://api.jquery.com/on/)
@@ -428,8 +428,8 @@ d3.select('li').on('click mouseenter mouseleave', function(d, i) {
 });
 
 ```
--->
 
+<!--
 #### selection.trigger
 
 jQuery equivalent: [$.trigger](http://api.jquery.com/trigger/)
@@ -450,7 +450,7 @@ d3.select(document).on('dataChange', function(data) {
 
 d3.select(document).trigger('dataChange', {newData: 'HelloWorld!'});
 ```
-
+-->
 
 
 ## Additional Functions
