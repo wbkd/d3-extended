@@ -1,40 +1,32 @@
 const tape = require("tape"),
       d3 = require("../")
-      jsdom = require("jsdom")
-      simulate = require("simulate");
+      jsdom = require("jsdom");
 
 
       tape('trigger - do stuff on trigger', test => {
-        var document = jsdom.jsdom('<body><div id="a" onclick="clickFunction()"></div><div id="b"></div><div id="c"></div></body>')
+        var document = jsdom.jsdom('<body><div id="a"></div><div id="b"></div><div id="c"></div></body>');
+        window = document.defaultView;
 
-        var testDiv = d3.select(document).select('#b');
-
+        var a = d3.select(document).select('#a');
 
         var count = 0;
 
-        test.ok(count == 0);
-
-        d3.select(document).select('#a').on('click', function() {
-          console.log(count);
-            count++;
+        a.on('click', function(d){
+          console.log("hey");
+          simulateClick(a);
         })
 
-        testDiv.on('click', function() {
-            console.log(count);
-            d3.select(document).select('#a').trigger( 'click' );
-        })
+        function simulateClick(elm) {
+          var evt = document.createEvent("MouseEvents");
+          evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);;
+          elm.node().dispatchEvent(evt);
+        }
 
 
+        //simulateClick(a);
 
-        var evt = document.createEvent("HTMLEvents");
-          evt.initEvent('click', false, true);
-          document.getElementById("b").dispatchEvent(evt)
-
-        test.ok(count == 1);
+        //why so often?!?!?
+        //a.trigger('click');
 
         test.end();
       });
-
-      function clickFunction() {
-
-      }

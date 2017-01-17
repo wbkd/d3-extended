@@ -9,7 +9,7 @@ const tape = require("tape"),
         const testDiv = d3.select(document).select('div')
         test.equal(testDiv.node().style.display, 'none');
 
-        testDiv.show();
+        testDiv.toggle();
 
         test.equal(testDiv.node().style.display, '');
         test.end();

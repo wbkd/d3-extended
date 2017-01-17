@@ -19,6 +19,8 @@ import { default as prepend } from './src/prepend';
 import { default as removeClass } from './src/removeClass';
 import { default as show } from './src/show';
 import { default as toggle } from './src/toggle';
+import { default as toggleClass } from './src/toggleClass';
+import { default as trigger } from './src/trigger';
 
 
 selection.prototype.addClass = addClass;
@@ -39,6 +41,8 @@ selection.prototype.prepend = prepend;
 selection.prototype.removeClass = removeClass;
 selection.prototype.show = show;
 selection.prototype.toggle = toggle;
+selection.prototype.toggleClass = toggleClass;
+selection.prototype.trigger = trigger;
 
 
 export { selection, select, selectAll }
