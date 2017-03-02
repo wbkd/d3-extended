@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  body {
+    font-family: Verdana;
+  }
+
+  .test{
+    height: 100px;
+    width: 100px;
+    background-color: #baffc9;
+  }
+
+
+
+</style>
+<body>
+  <h1>On()</h1>
+  <div class="test">Click me</div>
+  <div id="result"></div>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="d3-extended.js"></script>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+
+ d3.select('.test').on('click', function(d) {
+   d3.select('#result').text('click');
+ });
+
+</script>
+</body>
