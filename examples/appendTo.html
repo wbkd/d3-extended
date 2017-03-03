@@ -30,17 +30,18 @@
 <script src="jquery-3.1.1.min.js"></script>
 <script>
 
+
+d3.select('button')
+  .on('click', function(){
+    d3.select("#to-append")
+    .appendTo(d3.select('.test'));
+  });
+
+
 // d3.select('button')
 //   .on('click', function(){
-//     d3.select('#to-append')
+//     $('#to-append')
 //     .appendTo('.test');
 //   });
-
-
-  d3.select('button')
-    .on('click', function(){
-      $('#to-append')
-      .appendTo('.test');
-    });
 </script>
 </body>

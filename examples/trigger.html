@@ -27,12 +27,13 @@
 <script src="jquery-3.1.1.min.js"></script>
 <script>
 
-d3.select('.test').on('dataChange', function(data) {
-  console.log(data);
+$('.test').on('click', function(evt, data) {
+  console.log("yo");
+  console.log(evt, data);
 });
 
-d3.select('button').on('click', function(){
-  d3.select('.test').trigger('dataChange', {newData: 'HelloWorld!'});
+$('button').on('click', function(){
+  d3.select('.test').trigger('click', {new: "hallo"});
 })
 
 

@@ -11,6 +11,6 @@ const tape = require("tape"),
 
         testDiv.show();
 
-        test.equal(testDiv.node().style.display, '');
+        test.equal(testDiv.node().style.display, 'block');
         test.end();
       });

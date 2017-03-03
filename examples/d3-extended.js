@@ -130,7 +130,6 @@
     } else {
       d3_selection_on.apply(this, [type, listener, capture]);
     }
-
     return this;
   };
 
@@ -153,13 +152,33 @@
   }
 
   var show = function() {
-    this.style('display', '');
+    const tagName = this._groups[0][0].tagName;
+    let cStyle,
+        t = document.createElement(tagName),
+        gcs = "getComputedStyle" in window;
+
+    document.body.appendChild(t);
+    cStyle = (gcs ? window.getComputedStyle(t, "") : t.currentStyle).display;
+    document.body.removeChild(t);
+
+    this.style('display', cStyle);
     return this;
   }
 
   var toggle = function() {
-    var isHidden = this.style('display') == 'none';
-    return this.style('display', isHidden ? '' : 'none');
+
+      var tagName = this._groups[0][0].tagName;
+      var cStyle,
+          t = document.createElement(tagName),
+          gcs = "getComputedStyle" in window;
+
+      document.body.appendChild(t);
+      cStyle = (gcs ? window.getComputedStyle(t, "") : t.currentStyle).display;
+      document.body.removeChild(t);
+
+
+      var isHidden = this.style('display') == 'none';
+      return this.style('display', isHidden ? cStyle : 'none');
   }
 
   var toggleClass = function(classNames) {
@@ -175,7 +194,6 @@
   var trigger = function(evtName, data) {
 
     var d3_selection_on = d3__default.selection.prototype.on;
-    console.log(this);
     d3_selection_on.apply(this, [evtName, data]);
 
     return this;
