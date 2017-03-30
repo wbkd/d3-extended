@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-  body {
-    font-family: Verdana;
-  }
+    body {
+        font-family: Verdana;
+    }
 
-  .test{
-    height: 100px;
-    width: 100px;
-    background-color: #baffc9;
-  }
-
-
-
+    .test {
+        height: 100px;
+        width: 100px;
+        background-color: #baffc9;
+    }
 </style>
-<body>
-  <h1>Select First</h1>
-  <div class="test one first" id="first1">first1
-    <div class="first" id="first11">
-      Inner Div 1/1
-    </div>
-    <div class="first" id="first12">
-      Inner Div 1/2
-    </div>
-  </div>
-  <div class="test two first" id="first2">first2
-    <div class="first" id="first21">
-      Inner Div 2/1
-    </div>
-    <div class="first" id="first22">
-      Inner Div 2/2
-    </div>
-  </div>
-  <div class="test three first" id="first3">first3
-    <div class="first" id="first31">
-      Inner Div 3/1
-    </div>
-    <div class="first" id="first32">
-      Inner Div 3/2
-    </div>
-  </div>
-  <button id="button">Select first</button>
-  <div><span>d3-extended result: </span><span id="first-result"></span></div>
-  <div><span>jQuery result: </span><span id="first-result-jq"></span></div>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="d3-extended.js"></script>
-<script src="jquery-3.1.1.min.js"></script>
-<script>
-  d3.select('button')
-    .on('click', function(){
-      var first = d3.selectAll('.first').first();
-      d3.select("#first-result").text(first.attr('id'));
-      d3.select("#first-result-jq").text($('.first').first().attr('id'));
-    });
-</script>
+<body>
+    <h1>Select First</h1>
+    <div class="test one first" id="first1">first1
+        <div class="first" id="first11">
+            Inner Div 1/1
+        </div>
+        <div class="first" id="first12">
+            Inner Div 1/2
+        </div>
+    </div>
+    <div class="test two first" id="first2">first2
+        <div class="first" id="first21">
+            Inner Div 2/1
+        </div>
+        <div class="first" id="first22">
+            Inner Div 2/2
+        </div>
+    </div>
+    <div class="test three first" id="first3">first3
+        <div class="first" id="first31">
+            Inner Div 3/1
+        </div>
+        <div class="first" id="first32">
+            Inner Div 3/2
+        </div>
+    </div>
+    <button id="button">Select first</button>
+    <div><span>d3-extended result: </span><span id="first-result"></span></div>
+    <div><span>jQuery result: </span><span id="first-result-jq"></span></div>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="d3-extended.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        d3.select('button')
+            .on('click', function() {
+                var first = d3.selectAll('.first').first();
+                d3.select("#first-result").text(first.attr('id'));
+                d3.select("#first-result-jq").text($('.first').first().attr('id'));
+            });
+    </script>
 </body>

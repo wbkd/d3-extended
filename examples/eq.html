@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-  body {
-    font-family: Verdana;
-  }
+    body {
+        font-family: Verdana;
+    }
 
-  .test{
-    height: 100px;
-    width: 100px;
-    background-color: #baffc9;
-  }
-
-
-
+    .test {
+        height: 100px;
+        width: 100px;
+        background-color: #baffc9;
+    }
 </style>
-<body>
-  <h1>Select eq</h1>
-  <div class="test one eq" id="eq1">EQ1
-    <div class="eq" id="eq11">
-      Inner Div 1/1
-    </div>
-    <div class="eq" id="eq12">
-      Inner Div 1/2
-    </div>
-  </div>
-  <div class="test two eq" id="eq2">EQ2
-    <div class="eq" id="eq21">
-      Inner Div 2/1
-    </div>
-    <div class="eq" id="eq22">
-      Inner Div 2/2
-    </div>
-  </div>
-  <div class="test three eq" id="eq3">EQ3
-    <div class="eq" id="eq31">
-      Inner Div 3/1
-    </div>
-    <div class="eq" id="eq32">
-      Inner Div 3/2
-    </div>
-  </div>
-  <button id="button">Select eq</button>
-  <div><span>d3-extended result: </span><span id="eq-result"></span></div>
-  <div><span>jQuery result: </span><span id="eq-result-jq"></span></div>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="d3-extended.js"></script>
-<script src="jquery-3.1.1.min.js"></script>
-<script>
-  d3.select('button')
-    .on('click', function(){
-      var eq = d3.selectAll('.eq').eq(2);
-      d3.select("#eq-result").text(eq.attr('id'));
-      d3.select("#eq-result-jq").text($('.eq').eq(2).attr('id'));
-    });
-</script>
+<body>
+    <h1>Select eq</h1>
+    <div class="test one eq" id="eq1">EQ1
+        <div class="eq" id="eq11">
+            Inner Div 1/1
+        </div>
+        <div class="eq" id="eq12">
+            Inner Div 1/2
+        </div>
+    </div>
+    <div class="test two eq" id="eq2">EQ2
+        <div class="eq" id="eq21">
+            Inner Div 2/1
+        </div>
+        <div class="eq" id="eq22">
+            Inner Div 2/2
+        </div>
+    </div>
+    <div class="test three eq" id="eq3">EQ3
+        <div class="eq" id="eq31">
+            Inner Div 3/1
+        </div>
+        <div class="eq" id="eq32">
+            Inner Div 3/2
+        </div>
+    </div>
+    <button id="button">Select eq</button>
+    <div><span>d3-extended result: </span><span id="eq-result"></span></div>
+    <div><span>jQuery result: </span><span id="eq-result-jq"></span></div>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="d3-extended.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        d3.select('button')
+            .on('click', function() {
+                var eq = d3.selectAll('.eq').eq(2);
+                d3.select("#eq-result").text(eq.attr('id'));
+                d3.select("#eq-result-jq").text($('.eq').eq(2).attr('id'));
+            });
+    </script>
 </body>

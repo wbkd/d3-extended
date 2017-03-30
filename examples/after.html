@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-  body {
-    font-family: Verdana;
-  }
+    body {
+        font-family: Verdana;
+    }
 
-  .test{
-    height: 100px;
-    width: 100px;
-    background-color: #baffc9;
-  }
-
-
-
+    .test {
+        height: 100px;
+        width: 100px;
+        background-color: #baffc9;
+    }
 </style>
-<body>
-  <h1>After</h1>
-  <div class="test">Test</div>
-  <button id="button">Insert After</button>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="d3-extended.js"></script>
-<script src="jquery-3.1.1.min.js"></script>
-<script>
-  d3.select('button')
-    .on('click', function(){
-      d3.select('.test')
-      .after('div')
-      .text('after');
-    });
-</script>
+<body>
+    <h1>After</h1>
+    <div class="test">Test</div>
+    <button id="button">Insert After</button>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="d3-extended.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        d3.select('button')
+            .on('click', function() {
+                d3.select('.test')
+                    .after('div')
+                    .text('after');
+            });
+    </script>
 </body>

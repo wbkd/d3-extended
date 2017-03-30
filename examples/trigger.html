@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-  body {
-    font-family: Verdana;
-  }
+    body {
+        font-family: Verdana;
+    }
 
-  .test{
-    height: 100px;
-    width: 100px;
-    background-color: #baffc9;
-  }
+    .test {
+        height: 100px;
+        width: 100px;
+        background-color: #baffc9;
+    }
 
-  .blue {
-    background-color: #bae1ff;
-  }
-
-
+    .blue {
+        background-color: #bae1ff;
+    }
 </style>
+
 <body>
-  <h1>Trigger --- not working </h1>
-  <div class="test"></div>
-  <button>Trigger</button>
+    <h1>Trigger --- not working </h1>
+    <div class="test"></div>
+    <button>Trigger</button>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="d3-extended.js"></script>
-<script src="jquery-3.1.1.min.js"></script>
-<script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="d3-extended.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        $('.test').on('click', function(evt, data) {
+            console.log("yo");
+            console.log(evt, data);
+        });
 
-$('.test').on('click', function(evt, data) {
-  console.log("yo");
-  console.log(evt, data);
-});
-
-$('button').on('click', function(){
-  d3.select('.test').trigger('click', {new: "hallo"});
-})
-
-
-</script>
+        $('button').on('click', function() {
+            d3.select('.test').trigger('click', {
+                new: "hallo"
+            });
+        })
+    </script>
 </body>
