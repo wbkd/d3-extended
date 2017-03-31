@@ -1,6 +1,6 @@
 {
   "name": "d3-extended",
-  "version": "0.0.2",
+  "version": "2.0.0",
   "description": "Extends D3 with helpful functions which are similar to the jQuery API.",
   "keywords": [
     "d3",
@@ -24,7 +24,9 @@
     "d3-selection": "^1.0.3"
   },
   "devDependencies": {
+    "jsdom": "^9.12.0",
     "rollup": "0.27",
+    "simulate": "0.0.5",
     "tape": "4",
     "uglify-js": "2"
   }

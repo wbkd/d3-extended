@@ -192,14 +192,6 @@
     return this;
   }
 
-  var trigger = function(evtName, data) {
-
-    var d3_selection_on = d3__default.selection.prototype.on;
-    d3_selection_on.apply(this, [evtName, data]);
-
-    return this;
-  }
-
   d3.selection.prototype.addClass = addClass;
   d3.selection.prototype.after = after;
   d3.selection.prototype.appendTo = appendTo;
@@ -219,7 +211,6 @@
   d3.selection.prototype.show = show;
   d3.selection.prototype.toggle = toggle;
   d3.selection.prototype.toggleClass = toggleClass;
-  d3.selection.prototype.trigger = trigger;
 
   exports.selection = d3.selection;
   exports.select = d3.select;

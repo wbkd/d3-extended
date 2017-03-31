@@ -66,8 +66,8 @@ To use the plugin, include it after d3 in your HTML:
 
 ### Build
 
-To build d3-extended run ```gulp```.
-This will create d3-extended.js and a minified version in the root folder.
+To build d3-extended run ```npm run prepublish```.
+This will create d3-extended.js and a minified version in the build folder.
 
 ### Test
 
@@ -102,8 +102,6 @@ To run tests use ```npm test```. Note: The tests require that you have [phantomj
 #### [Events](#events-1)
 
 * [on](#selectionon)
-* [trigger](#selectiontrigger)
-
 
 #### [Additional](#additional-functions)
 
@@ -204,7 +202,7 @@ selection.appendTo(tagName);
 Example:
 
 ```
-d3.selectAll('.foo').appendTo('.target');  
+d3.selectAll('.foo').appendTo('.target');
 ```
 
 
@@ -257,7 +255,7 @@ Example:
 
 ```
 d3.selectAll('ul').toggleClass('active');
-d3.selectAll('ul').toggleClass('class-a class-b'); //toggle multiple classes  
+d3.selectAll('ul').toggleClass('class-a class-b'); //toggle multiple classes
 ```
 
 
@@ -428,30 +426,6 @@ d3.select('li').on('click mouseenter mouseleave', function(d, i) {
 });
 
 ```
-
-<!--
-#### selection.trigger
-
-jQuery equivalent: [$.trigger](http://api.jquery.com/trigger/)
-
-Note: Currently in development, see issues.
-Triggers custom events on a selection.
-
-```
-selection.trigger(eventName [,data]);
-```
-
-Example:
-
-```
-d3.select(document).on('dataChange', function(data) {
-  console.log(data);
-});
-
-d3.select(document).trigger('dataChange', {newData: 'HelloWorld!'});
-```
--->
-
 
 ## Additional Functions
 These functions are not related to jQuery but they are little helper function we often use in our applications.
