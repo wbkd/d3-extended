@@ -1,5 +1,7 @@
 # [d3.js Extended](http://wbkd.github.io/d3-extended/)
 
+This module is **compatible with d3 v4**. If you are looking for the last version you can find it on [this branch](https://github.com/wbkd/d3-extended/tree/v3).
+
 Extends [D3](http://www.d3js.org) with helpful functions which are similar to the jQuery API.
 
 If you want to get to know more about this project, feel free to read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-jquery-with-d3).
