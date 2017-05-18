@@ -467,4 +467,5 @@ d3.select('svg rect').moveToFront();
 
 * [moklick](http://www.twitter.com/moklick)
 * [chrtze](http://www.twitter.com/chrtze)
+* [tine](https://twitter.com/errorroutine)
 * [mgold](http://github.com/mgold)
