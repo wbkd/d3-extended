@@ -11,21 +11,21 @@ If you want to get to know more about this project, feel free to read the blog p
 
 **npm**
 
-```
+```shell
 npm install --save d3-extended
 ```
 
 
 **bower**
 
-```
+```shell
 bower install --save d3-extended
 ```
 
 
 **git clone**
 
-```
+```shell
 git clone https://github.com/wbkd/d3-extended.git
 ```
 
@@ -35,7 +35,7 @@ git clone https://github.com/wbkd/d3-extended.git
 **CommonJS**
 
 
-```
+```javascript
 var d3 = require('d3'); //require d3 normally
 require('d3-extended')(d3); //extend d3 with the functions
 ```
@@ -45,7 +45,7 @@ require('d3-extended')(d3); //extend d3 with the functions
 
 d3 has to defined in the require-config or the file must be in the same folder as d3-extended.js.
 
-```
+```javascript
 requirejs(['d3-extended'], function(d3) {
   // variable d3 is now extended
 });
@@ -57,7 +57,7 @@ requirejs(['d3-extended'], function(d3) {
 You can use the compressed or uncompressed version.
 To use the plugin, include it after d3 in your HTML:
 
-```
+```javascript
 <script src="path/to/d3.js"></script>
 <script src="path/to/d3-extended.js"></script>
 <script>
@@ -119,13 +119,13 @@ jQuery equivalent: [$.prepend](http://api.jquery.com/prepend/)
 
 Inserts elements as first child of the current selection. Returns the new elements as a D3 selection.
 
-```
+```javascript
 selection.prepend(tagName);
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('li')
   .prepend('a')
   .text('Some Link')
@@ -138,13 +138,13 @@ jQuery equivalent: [$.after](http://api.jquery.com/after/)
 
 Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
 
-```
+```javascript
 selection.after(tagName);
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('li')
   .after('li')
   .text('Item');
@@ -157,13 +157,13 @@ jQuery equivalent: [$.before](http://api.jquery.com/before/)
 
 Inserts new elements before each element in the current selection. Returns the newly created elements as a d3 selection.
 
-```
+```javascript
 selection.before(tagName);
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('li')
   .before('li')
   .text('Item');
@@ -178,13 +178,13 @@ jQuery equivalent: [$.empty](http://api.jquery.com/empty/)
 Removes all children of the current selection. Returns the current selection.
 We are using another name for this function as in jQuery, because d3 already has an empty function.
 
-```
+```javascript
 selection.clear();
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('ul')
   .clear();
   // ul element has no children anymore
@@ -197,13 +197,13 @@ jQuery equivalent: [$.appendTo](http://api.jquery.com/appendto/)
 
 Appends elements of the current selection to the target element. Returns the target selection.
 
-```
+```javascript
 selection.appendTo(tagName);
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('.foo').appendTo('.target');
 ```
 
@@ -214,13 +214,13 @@ jQuery equivalent: [$.addClass](http://api.jquery.com/addclass/)
 
 Adds class to elements in the current selection. Returns current selection.
 
-```
+```javascript
 selection.addClass(className);
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('ul').addClass('active');
 d3.selectAll('ul').addClass('class-a class-b'); //will add two classes
 ```
@@ -237,7 +237,7 @@ selection.removeClass(className);
 
 Example:
 
-```
+```javascript
 d3.selectAll('ul').removeClass('active');
 d3.selectAll('ul').removeClass('class-a class-b'); //will remove two classes
 ```
@@ -249,13 +249,13 @@ jQuery equivalent: [$.toggleClass](http://api.jquery.com/toggleclass/)
 
 Adds or removes class from elements in the current selection. Returns current selection.
 
-```
+```javascript
 selection.toggleClass(className);
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('ul').toggleClass('active');
 d3.selectAll('ul').toggleClass('class-a class-b'); //toggle multiple classes
 ```
@@ -267,13 +267,13 @@ jQuery equivalent: [$.hasClass](http://api.jquery.com/hasclass/)
 
 Checks if current selection has the passed class. Returns true or false.
 
-```
+```javascript
 selection.hasClass(className);
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('ul').hasClass('active');
 ```
 
@@ -285,14 +285,14 @@ jQuery equivalent: [$.css](http://api.jquery.com/css/)
 Applies style to elements in the current selection. Returns the selection.
 Works in the same way like the D3 style function we only changed the name here.
 
-```
+```javascript
 selection.css(name, value);
 selection.css(object);
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('.foo').css('display', 'block');
 
 // or
@@ -309,13 +309,13 @@ jQuery equivalent: [$.show](http://api.jquery.com/show/)
 
 Diplays the current selection. Returns the selection.
 
-```
+```javascript
 selection.show();
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('.foo').show();
 ```
 
@@ -325,13 +325,13 @@ jQuery equivalent: [$.hide](http://api.jquery.com/hide/)
 
 Hides the current selection. Returns the selection.
 
-```
+```javascript
 selection.hide();
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('.foo').hide();
 ```
 
@@ -341,13 +341,13 @@ jQuery equivalent: [$.toggle](http://api.jquery.com/toggle/)
 
 Diplays or hides the current selection. Returns the selection.
 
-```
+```javascript
 selection.toggle();
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('.foo').toggle();
 ```
 
@@ -361,13 +361,13 @@ jQuery equivalent: [$.eq](http://api.jquery.com/eq/)
 Reduces current selection to the element with the passed index. Returns element.
 If you have a nested group, you can also specify the group index, to select a certain group.
 
-```
+```javascript
 selection.eq(index[, groupIndex]);
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('li').eq('0');
 // returns first li element
 ```
@@ -379,13 +379,13 @@ jQuery equivalent: [$.first](http://api.jquery.com/first/)
 
 Reduces the current selection to the first element. Then returns the reduced selection.
 
-```
+```javascript
 selection.first();
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('ul').first();
 ```
 
@@ -396,13 +396,13 @@ jQuery equivalent: [$.last](http://api.jquery.com/last/)
 
 Reduces the current selection to the last element. Then returns the reduced selection.
 
-```
+```javascript
 selection.last();
 ```
 
 Example:
 
-```
+```javascript
 d3.selectAll('ul').last();
 ```
 
@@ -416,13 +416,13 @@ jQuery equivalent: [$.on](http://api.jquery.com/on/)
 Works like the normal `on` function but now you can pass multiple event types like you know it from jquery.
 We took this function from the awesome [d3-jetpack](https://github.com/gka/d3-jetpack)
 
-```
+```javascript
 selection.on(types [, listener[, capture]])
 ```
 
 Example:
 
-```
+```javascript
 d3.select('li').on('click mouseenter mouseleave', function(d, i) {
   // do something
 });
@@ -436,13 +436,13 @@ These functions are not related to jQuery but they are little helper function we
 
 Displays SVG element above the other ones.
 
-```
+```javascript
 selection.moveToBack();
 ```
 
 Example:
 
-```
+```javascript
 d3.select('svg circle').moveToBack();
 ```
 
@@ -450,13 +450,13 @@ d3.select('svg circle').moveToBack();
 
 Displays SVG element below the other ones.
 
-```
+```javascript
 selection.moveToFront();
 ```
 
 Example:
 
-```
+```javascript
 d3.select('svg rect').moveToFront();
 ```
 
