@@ -1,8 +1,8 @@
 # [d3.js Extended](http://wbkd.github.io/d3-extended/)
 
-This module is **compatible with d3 v4**. If you are looking for the last version you can find it on [this branch](https://github.com/wbkd/d3-extended/tree/v3).
+This module is **compatible with d3 v4**. If you are looking for the v3 version you can find it on the [v3 branch](https://github.com/wbkd/d3-extended/tree/v3).
 
-Extends [D3](http://www.d3js.org) with helpful functions which are similar to the jQuery API.
+This module extends [d3-selection](https://github.com/d3/d3-selection) with helpful functions which are similar to the jQuery API.
 
 If you want to get to know more about this project, feel free to read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-jquery-with-d3).
 
@@ -14,14 +14,6 @@ If you want to get to know more about this project, feel free to read the blog p
 ```shell
 npm install --save d3-extended
 ```
-
-
-**bower**
-
-```shell
-bower install --save d3-extended
-```
-
 
 **git clone**
 
@@ -36,29 +28,17 @@ git clone https://github.com/wbkd/d3-extended.git
 
 
 ```javascript
-var d3 = require('d3'); //require d3 normally
-require('d3-extended')(d3); //extend d3 with the functions
+const d3Selection = require('d3-selection');
+require('d3-extended'); //extend d3-selection with the functions
 ```
-
-
-**AMD**
-
-d3 has to defined in the require-config or the file must be in the same folder as d3-extended.js.
-
-```javascript
-requirejs(['d3-extended'], function(d3) {
-  // variable d3 is now extended
-});
-```
-
 
 **Oldschool**
 
 You can use the compressed or uncompressed version.
-To use the plugin, include it after d3 in your HTML:
+To use the plugin, include it after d3-selection in your HTML:
 
-```javascript
-<script src="path/to/d3.js"></script>
+```markup
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-selection/1.1.0/d3-selection.min.js"></script>
 <script src="path/to/d3-extended.js"></script>
 <script>
   // variable d3 is now extended

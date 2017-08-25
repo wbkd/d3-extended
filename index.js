@@ -1,5 +1,5 @@
 
-import { selection, select, selectAll } from "d3-selection";
+import { selection } from 'd3-selection';
 
 import { default as addClass } from './src/addClass';
 import { default as after } from './src/after';
@@ -21,7 +21,6 @@ import { default as show } from './src/show';
 import { default as toggle } from './src/toggle';
 import { default as toggleClass } from './src/toggleClass';
 
-
 selection.prototype.addClass = addClass;
 selection.prototype.after = after;
 selection.prototype.appendTo = appendTo;
@@ -41,6 +40,3 @@ selection.prototype.removeClass = removeClass;
 selection.prototype.show = show;
 selection.prototype.toggle = toggle;
 selection.prototype.toggleClass = toggleClass;
-
-
-export { selection, select, selectAll }

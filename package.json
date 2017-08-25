@@ -1,7 +1,7 @@
 {
   "name": "d3-extended",
   "version": "2.0.0",
-  "description": "Extends D3 with helpful functions which are similar to the jQuery API.",
+  "description": "Extends D3 Selection with helpful functions which are similar to the jQuery API.",
   "keywords": [
     "d3",
     "d3-module"
@@ -15,7 +15,7 @@
     "url": "https://github.com/wbkd/d3-extended.git"
   },
   "scripts": {
-    "pretest": "rm -rf build && mkdir build && rollup -f umd -g d3-selection:d3 -n d3 -o build/d3-extended.js -- index.js",
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -g d3-selection:d3 -n d3Extended -o build/d3-extended.js -- index.js",
     "test": "tape 'test/**/*-test.js'",
     "prepublish": "npm run test && uglifyjs build/d3-extended.js -c -m -o build/d3-extended.min.js",
     "postpublish": "zip -j build/d3-extended.zip -- LICENSE README.md build/d3-extended.js build/d3-extended.min.js"
