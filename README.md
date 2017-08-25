@@ -24,12 +24,18 @@ git clone https://github.com/wbkd/d3-extended.git
 
 ### Usage
 
-**CommonJS**
+**ES6 modules**
 
+```javascript
+import * as d3Selection from 'd3-selection';
+import 'd3-extended'; // d3Selection is now extended
+```
+
+**CommonJS**
 
 ```javascript
 const d3Selection = require('d3-selection');
-require('d3-extended'); //extend d3-selection with the functions
+require('d3-extended'); // d3Selection is now extended
 ```
 
 **Oldschool**
@@ -41,14 +47,14 @@ To use the plugin, include it after d3-selection in your HTML:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-selection/1.1.0/d3-selection.min.js"></script>
 <script src="path/to/d3-extended.js"></script>
 <script>
-  // variable d3 is now extended
+  // d3 is now extended
 </script>
 ```
 
 
 ### Build
 
-To build d3-extended run ```npm run prepublish```.
+To build d3-extended run ```npm run build```.
 This will create d3-extended.js and a minified version in the build folder.
 
 ### Test
