@@ -15,17 +15,22 @@
     "url": "https://github.com/wbkd/d3-extended.git"
   },
   "scripts": {
-    "pretest": "rm -rf build && mkdir build && rollup -f umd -g d3-selection:d3 -n d3Extended -o build/d3-extended.js -- index.js",
     "test": "tape 'test/**/*-test.js'",
-    "prepublish": "npm run test && uglifyjs build/d3-extended.js -c -m -o build/d3-extended.min.js",
-    "postpublish": "zip -j build/d3-extended.zip -- LICENSE README.md build/d3-extended.js build/d3-extended.min.js"
+    "build": "rollup -c rollup.config.js && rollup -c rollup.min.config.js"
   },
   "dependencies": {
     "d3-selection": "^1.0.3"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
     "jsdom": "^9.12.0",
     "rollup": "0.27",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-butternut": "^0.1.0",
+    "rollup-plugin-multi-dest": "^1.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
     "simulate": "0.0.5",
     "tape": "4",
     "uglify-js": "2"

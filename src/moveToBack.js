@@ -1,10 +1,10 @@
-var moveToBack = function() {
+function moveToBack() {
   return this.each(function() {
-    var firstChild = this.parentNode.firstChild;
+    const firstChild = this.parentNode.firstChild;
     if (firstChild) {
       this.parentNode.insertBefore(this, firstChild);
     }
   });
 }
 
-export default moveToBack
+export default moveToBack;

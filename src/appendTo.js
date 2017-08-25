@@ -1,17 +1,16 @@
-import {default as d3} from "d3-selection";
+import { selectAll } from 'd3-selection';
 
-var appendTo = function(selection) {
-  var targets = selection,
-    targetCount = targets.size(),
-    _this = this,
-    clones = [];
-
+function appendTo(selection) {
+  const targets = selection;
+  const targetCount = targets.size();
+  const _this = this;
+  const clones = [];
 
   targets.each(function() {
-    var currTarget = this;
+    const currTarget = this;
     _this.each(function() {
       if(targetCount > 1) {
-        var clone = this.cloneNode(true);
+        const clone = this.cloneNode(true);
         currTarget.appendChild(clone);
         clones.push(clone);
       }
@@ -21,11 +20,11 @@ var appendTo = function(selection) {
     });
   });
 
-  if(targetCount > 1) {
+  if (targetCount > 1) {
     this.remove();
   }
 
-  return clones.length > 0 ? d3.selectAll(clones) : this;
+  return clones.length > 0 ? selectAll(clones) : this;
 }
 
 export default appendTo;

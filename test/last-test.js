@@ -1,7 +1,7 @@
 const tape = require('tape');
-const d3 = require('../');
+const d3 = require('d3-selection');
+require('../build/d3-extended');
 const jsdom = require('jsdom');
-
 
 tape('hide - hide element', test => {
   const document = jsdom.jsdom('<body><div id="a"></div><div id="b"></div><div id="c"></div></body>');

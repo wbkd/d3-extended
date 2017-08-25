@@ -1,4 +1,4 @@
-var hasClass = function(className) {
+function hasClass(className) {
   return this.classed(className);
 }
 

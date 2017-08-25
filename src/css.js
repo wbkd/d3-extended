@@ -1,10 +1,10 @@
-var css = function(prop, value){
-  if(value){
+function css(prop, value){
+  if (value) {
     this.style(prop, value);
-  }else{
-    var that = this;
+  } else {
+    const that = this;
     Object.keys(prop).map(function(o,i) {
-      var value = prop[o];
+      const value = prop[o];
       that.style(o, value);
     });
   }

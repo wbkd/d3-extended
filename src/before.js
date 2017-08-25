@@ -1,16 +1,16 @@
-import {default as d3} from "d3-selection";
+import { selectAll } from 'd3-selection';
 
-var before = function(tagName) {
-  var elements = [];
+function before(tagName) {
+  const elements = [];
 
   this.each(function() {
-    var document = this.ownerDocument;
-    var element = document.createElement(tagName);
+    const document = this.ownerDocument;
+    const element = document.createElement(tagName);
     this.parentNode.insertBefore(element, this);
     elements.push(element);
   });
 
-  return d3.selectAll(elements);
+  return selectAll(elements);
 }
 
 export default before

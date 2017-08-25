@@ -1,5 +1,5 @@
-var removeClass = function(classNames) {
+function removeClass(classNames) {
   return this.classed(classNames, false);
 }
 
-export default removeClass
+export default removeClass;

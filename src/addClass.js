@@ -1,6 +1,6 @@
-var addClass = function(classNames) {
-  return this.classed(classNames, true);
+function addClass(classNames) {
+  this.classed(classNames, true);
+  return this;
 }
-
 
 export default addClass;

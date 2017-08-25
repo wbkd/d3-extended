@@ -1,5 +1,6 @@
 const tape = require('tape');
-const d3 = require('../');
+const d3 = require('d3-selection');
+require('../build/d3-extended');
 const jsdom = require('jsdom');
 
 tape('appendTo - append new node to div', test => {

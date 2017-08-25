@@ -1,7 +1,7 @@
-var moveToFront = function() {
-  return this.each(function(){
+function moveToFront() {
+  return this.each(function() {
     this.parentNode.appendChild(this);
   });
 }
 
-export default moveToFront
+export default moveToFront;

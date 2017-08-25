@@ -1,8 +1,8 @@
-import {default as d3} from "d3-selection";
+import { select } from 'd3-selection';
 
-var last = function() {
-  var size = this['_groups'][0].length-1;
-  return d3.select(this['_groups'][0][size]);
+function last() {
+  const size = this['_groups'][0].length-1;
+  return select(this['_groups'][0][size]);
 }
 
-export default last
+export default last;

@@ -1,5 +1,6 @@
 const tape = require('tape');
-const d3 = require('../');
+const d3 = require('d3-selection');
+require('../build/d3-extended');
 const jsdom = require('jsdom');
 
 tape('addclass - class added to element', test => {
@@ -9,6 +10,8 @@ tape('addclass - class added to element', test => {
       <h1 class='c3'></h1>
     </body>`);
   const body = d3.select(document).select('body').addClass('c3');
+
+  console.log(d3.select(document).select('body'))
 
   test.ok(body.classed('c3'));
   test.equal(body.node().classList.length, 1);

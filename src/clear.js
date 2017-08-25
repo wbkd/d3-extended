@@ -1,4 +1,4 @@
-var clear = function() {
+function clear() {
   this.selectAll('*').remove();
   return this;
 }

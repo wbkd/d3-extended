@@ -1,4 +1,4 @@
-var hide = function() {
+function hide() {
   this.style('display', 'none');
   return this;
 }

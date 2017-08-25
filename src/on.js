@@ -1,12 +1,12 @@
 // taken from the awesome https://github.com/gka/d3-jetpack/blob/master/d3-jetpack.js#L138
 // we need the original on function from d3 for selection.trigger
-import {default as d3} from "d3-selection";
+import { selection } from 'd3-selection';
 
-var d3_selection_on = d3.selection.prototype.on;
-var on = function(type, listener, capture) {
+const d3_selection_on = selection.prototype.on;
+function on(type, listener, capture) {
   if (typeof type === 'string' && type.indexOf(' ') > -1) {
-    var types = type.split(' ');
-    for (var i = 0; i < types.length; i++) {
+    const types = type.split(' ');
+    for (let i = 0; i < types.length; i++) {
         d3_selection_on.apply(this, [types[i], listener, capture]);
     }
   } else {
@@ -16,4 +16,4 @@ var on = function(type, listener, capture) {
   return this;
 };
 
-export default on
+export default on;
