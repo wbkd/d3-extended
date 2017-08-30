@@ -61,9 +61,3 @@ This will create d3-extended.js and a minified version in the build folder.
 
 To run tests use ```npm test```. Note: The tests require that you have [phantomjs](http://phantomjs.org/) installed globally. If you see errors, try ```npm install -g phantomjs``` before running the tests.
 
-## Contributors
-
-* [moklick](http://www.twitter.com/moklick)
-* [chrtze](http://www.twitter.com/chrtze)
-* [tine](https://twitter.com/errorroutine)
-* [mgold](http://github.com/mgold)
