@@ -1,10 +1,8 @@
-# [d3.js Extended](http://wbkd.github.io/d3-extended/)
+# [d3 Extended](http://wbkd.github.io/d3-extended/)
 
-This module is **compatible with d3 v4**. If you are looking for the v3 version you can find it on the [v3 branch](https://github.com/wbkd/d3-extended/tree/v3).
+d3 Extended is **compatible with d3 v4**. If you are looking for the v3 compatible module you can find it on the [v3 branch](https://github.com/wbkd/d3-extended/tree/v3).
 
-This module extends [d3-selection](https://github.com/d3/d3-selection) with helpful functions which are similar to the jQuery API.
-
-If you want to get to know more about this project, feel free to read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-jquery-with-d3).
+This module extends [d3-selection](https://github.com/d3/d3-selection) with helpful functions which are similar to the jQuery API. If you want to get to know more about this project, feel free to read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-jquery-with-d3).
 
 
 ### Installation
