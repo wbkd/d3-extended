@@ -42,7 +42,7 @@ require('d3-extended'); // d3Selection is now extended
 You can use the compressed or uncompressed version.
 To use the plugin, include it after d3-selection in your HTML:
 
-```markup
+```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-selection/1.1.0/d3-selection.min.js"></script>
 <script src="path/to/d3-extended.js"></script>
 <script>
