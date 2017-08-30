@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>after.js - Documentation</title>
+    <title>clear.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">after.js</h1>
+    <h1 class="page-title">clear.js</h1>
     
 
     
@@ -37,38 +37,27 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { selectAll } from 'd3-selection';
-
-/**
-* jQuery equivalent: [$.after](http://api.jquery.com/after/)
+            <pre class="prettyprint source linenums"><code>/**
+* jQuery equivalent: [$.empty](http://api.jquery.com/empty/)
 *
-* Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
+* Removes all children of the current selection. Returns the current selection.
+We are using another name for this function as in jQuery, because d3 already has an empty function.
 *
 * @function
-* @name after
+* @name clear
 * @example
-* d3.selectAll('li')
-*   .after('li')
-*   .text('Item');
-*   //do something else with the inserted elements...
+* d3.selectAll('ul')
+*   .clear();
+*   // ul element has no children anymore.
 *
-* @param {string}  tagName - The element to insert
-* @returns {selection} - The new elements as a D3 selection.
+* @returns {selection} - The current selection
 **/
-function after(tagName) {
-  const elements = [];
-
-  this.each(function() {
-    const document = this.ownerDocument;
-    const element = document.createElement(tagName);
-    this.parentNode.insertBefore(element, this.nextSibling);
-    elements.push(element);
-  });
-
-  return selectAll(elements);
+function clear() {
+  this.selectAll('*').remove();
+  return this;
 }
 
-export default after;
+export default clear
 </code></pre>
         </article>
     </section>

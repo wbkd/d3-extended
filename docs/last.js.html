@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>after.js - Documentation</title>
+    <title>last.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">after.js</h1>
+    <h1 class="page-title">last.js</h1>
     
 
     
@@ -37,38 +37,26 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { selectAll } from 'd3-selection';
+            <pre class="prettyprint source linenums"><code>import { select } from 'd3-selection';
 
 /**
-* jQuery equivalent: [$.after](http://api.jquery.com/after/)
+* jQuery equivalent: [$.last](http://api.jquery.com/last/)
 *
-* Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
+* Reduces the current selection to the last element. Then returns the reduced selection.
 *
 * @function
-* @name after
+* @name last
 * @example
-* d3.selectAll('li')
-*   .after('li')
-*   .text('Item');
-*   //do something else with the inserted elements...
+* d3.selectAll('ul').last();
 *
-* @param {string}  tagName - The element to insert
-* @returns {selection} - The new elements as a D3 selection.
+* @returns {selection} - The reduced selection.
 **/
-function after(tagName) {
-  const elements = [];
-
-  this.each(function() {
-    const document = this.ownerDocument;
-    const element = document.createElement(tagName);
-    this.parentNode.insertBefore(element, this.nextSibling);
-    elements.push(element);
-  });
-
-  return selectAll(elements);
+function last() {
+  const size = this['_groups'][0].length-1;
+  return select(this['_groups'][0][size]);
 }
 
-export default after;
+export default last;
 </code></pre>
         </article>
     </section>

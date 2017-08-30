@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>after.js - Documentation</title>
+    <title>before.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">after.js</h1>
+    <h1 class="page-title">before.js</h1>
     
 
     
@@ -40,35 +40,35 @@
             <pre class="prettyprint source linenums"><code>import { selectAll } from 'd3-selection';
 
 /**
-* jQuery equivalent: [$.after](http://api.jquery.com/after/)
+* jQuery equivalent: [$.before](http://api.jquery.com/before/)
 *
-* Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
+* Inserts new elements before each element in the current selection. Returns the newly created elements as a d3 selection.
 *
 * @function
-* @name after
+* @name before
 * @example
 * d3.selectAll('li')
-*   .after('li')
+*   .before('li')
 *   .text('Item');
 *   //do something else with the inserted elements...
 *
 * @param {string}  tagName - The element to insert
 * @returns {selection} - The new elements as a D3 selection.
 **/
-function after(tagName) {
+function before(tagName) {
   const elements = [];
 
   this.each(function() {
     const document = this.ownerDocument;
     const element = document.createElement(tagName);
-    this.parentNode.insertBefore(element, this.nextSibling);
+    this.parentNode.insertBefore(element, this);
     elements.push(element);
   });
 
   return selectAll(elements);
 }
 
-export default after;
+export default before
 </code></pre>
         </article>
     </section>

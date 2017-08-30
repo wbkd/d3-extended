@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>after.js - Documentation</title>
+    <title>appendTo.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">after.js</h1>
+    <h1 class="page-title">appendTo.js</h1>
     
 
     
@@ -40,35 +40,46 @@
             <pre class="prettyprint source linenums"><code>import { selectAll } from 'd3-selection';
 
 /**
-* jQuery equivalent: [$.after](http://api.jquery.com/after/)
+* jQuery equivalent: [$.appendTo](http://api.jquery.com/appendto/)
 *
-* Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
+* Appends elements of the current selection to the target element. Returns the target selection.
 *
 * @function
-* @name after
+* @name appendTo
 * @example
-* d3.selectAll('li')
-*   .after('li')
-*   .text('Item');
-*   //do something else with the inserted elements...
+* d3.selectAll('.foo').appendTo('.target');
 *
-* @param {string}  tagName - The element to insert
-* @returns {selection} - The new elements as a D3 selection.
+* @param {string}  tagName - The element to append
+* @returns {selection} - The target selection.
 **/
-function after(tagName) {
-  const elements = [];
+function appendTo(selection) {
+  const targets = selection;
+  const targetCount = targets.size();
+  const _this = this;
+  const clones = [];
 
-  this.each(function() {
-    const document = this.ownerDocument;
-    const element = document.createElement(tagName);
-    this.parentNode.insertBefore(element, this.nextSibling);
-    elements.push(element);
+  targets.each(function() {
+    const currTarget = this;
+    _this.each(function() {
+      if(targetCount > 1) {
+        const clone = this.cloneNode(true);
+        currTarget.appendChild(clone);
+        clones.push(clone);
+      }
+      else {
+        currTarget.appendChild(this);
+      }
+    });
   });
 
-  return selectAll(elements);
+  if (targetCount > 1) {
+    this.remove();
+  }
+
+  return clones.length > 0 ? selectAll(clones) : this;
 }
 
-export default after;
+export default appendTo;
 </code></pre>
         </article>
     </section>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>after.js - Documentation</title>
+    <title>on.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">after.js</h1>
+    <h1 class="page-title">on.js</h1>
     
 
     
@@ -37,38 +37,43 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { selectAll } from 'd3-selection';
+            <pre class="prettyprint source linenums"><code>// taken from the awesome https://github.com/gka/d3-jetpack/blob/master/d3-jetpack.js#L138
+// we need the original on function from d3 for selection.trigger
+import { selection } from 'd3-selection';
 
 /**
-* jQuery equivalent: [$.after](http://api.jquery.com/after/)
+* jQuery equivalent: [$.on](http://api.jquery.com/on/)
 *
-* Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
+* Works like the normal `on` function but now you can pass multiple event types like you know it from jquery.
+We took this function from the awesome [d3-jetpack](https://github.com/gka/d3-jetpack)
 *
 * @function
-* @name after
+* @name on
 * @example
-* d3.selectAll('li')
-*   .after('li')
-*   .text('Item');
-*   //do something else with the inserted elements...
+* d3.select('li').on('click mouseenter mouseleave', function(d, i) {
+*   // do something
+* });
 *
-* @param {string}  tagName - The element to insert
-* @returns {selection} - The new elements as a D3 selection.
+* @param {string}  types -
+* @param {string}  listener -
+* @param {string}  capture -
+* @returns {selection} - The target selection.
 **/
-function after(tagName) {
-  const elements = [];
+const d3_selection_on = selection.prototype.on;
+function on(type, listener, capture) {
+  if (typeof type === 'string' &amp;&amp; type.indexOf(' ') > -1) {
+    const types = type.split(' ');
+    for (let i = 0; i &lt; types.length; i++) {
+        d3_selection_on.apply(this, [types[i], listener, capture]);
+    }
+  } else {
+    d3_selection_on.apply(this, [type, listener, capture]);
+  }
 
-  this.each(function() {
-    const document = this.ownerDocument;
-    const element = document.createElement(tagName);
-    this.parentNode.insertBefore(element, this.nextSibling);
-    elements.push(element);
-  });
+  return this;
+};
 
-  return selectAll(elements);
-}
-
-export default after;
+export default on;
 </code></pre>
         </article>
     </section>

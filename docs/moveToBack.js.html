@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>after.js - Documentation</title>
+    <title>moveToBack.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">after.js</h1>
+    <h1 class="page-title">moveToBack.js</h1>
     
 
     
@@ -37,38 +37,25 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { selectAll } from 'd3-selection';
-
-/**
-* jQuery equivalent: [$.after](http://api.jquery.com/after/)
-*
-* Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
+            <pre class="prettyprint source linenums"><code>/**
+* Displays SVG element above the other ones.
 *
 * @function
-* @name after
+* @name moveToBack
 * @example
-* d3.selectAll('li')
-*   .after('li')
-*   .text('Item');
-*   //do something else with the inserted elements...
+* d3.select('svg circle').moveToBack();
 *
-* @param {string}  tagName - The element to insert
-* @returns {selection} - The new elements as a D3 selection.
 **/
-function after(tagName) {
-  const elements = [];
-
-  this.each(function() {
-    const document = this.ownerDocument;
-    const element = document.createElement(tagName);
-    this.parentNode.insertBefore(element, this.nextSibling);
-    elements.push(element);
+function moveToBack() {
+  return this.each(function() {
+    const firstChild = this.parentNode.firstChild;
+    if (firstChild) {
+      this.parentNode.insertBefore(this, firstChild);
+    }
   });
-
-  return selectAll(elements);
 }
 
-export default after;
+export default moveToBack;
 </code></pre>
         </article>
     </section>

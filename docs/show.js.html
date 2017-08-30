@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>after.js - Documentation</title>
+    <title>show.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">after.js</h1>
+    <h1 class="page-title">show.js</h1>
     
 
     
@@ -37,38 +37,33 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { selectAll } from 'd3-selection';
-
-/**
-* jQuery equivalent: [$.after](http://api.jquery.com/after/)
+            <pre class="prettyprint source linenums"><code>/**
+* jQuery equivalent: [$.show](http://api.jquery.com/show/)
 *
-* Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
+* Diplays the current selection. Returns the selection.
 *
 * @function
-* @name after
+* @name show
 * @example
-* d3.selectAll('li')
-*   .after('li')
-*   .text('Item');
-*   //do something else with the inserted elements...
+* d3.selectAll('.foo').show();
 *
-* @param {string}  tagName - The element to insert
-* @returns {selection} - The new elements as a D3 selection.
+* @returns {selection} - Returns the selection.
 **/
-function after(tagName) {
-  const elements = [];
+funct
+function show() {
+  const tagName = this._groups[0][0].tagName;
+  const t = document.createElement(tagName);
+  const gcs = "getComputedStyle" in window;
 
-  this.each(function() {
-    const document = this.ownerDocument;
-    const element = document.createElement(tagName);
-    this.parentNode.insertBefore(element, this.nextSibling);
-    elements.push(element);
-  });
+  document.body.appendChild(t);
+  const cStyle = (gcs ? window.getComputedStyle(t, '') : t.currentStyle).display;
+  document.body.removeChild(t);
 
-  return selectAll(elements);
+  this.style('display', cStyle);
+  return this;
 }
 
-export default after;
+export default show;
 </code></pre>
         </article>
     </section>

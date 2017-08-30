@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>after.js - Documentation</title>
+    <title>toggle.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">after.js</h1>
+    <h1 class="page-title">toggle.js</h1>
     
 
     
@@ -37,38 +37,32 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { selectAll } from 'd3-selection';
-
-/**
-* jQuery equivalent: [$.after](http://api.jquery.com/after/)
+            <pre class="prettyprint source linenums"><code>/**
+* jQuery equivalent: [$.toggle](http://api.jquery.com/toggle/)
 *
-* Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
+* Diplays or hides the current selection. Returns the selection.
 *
 * @function
-* @name after
+* @name toggle
 * @example
-* d3.selectAll('li')
-*   .after('li')
-*   .text('Item');
-*   //do something else with the inserted elements...
+* d3.selectAll('.foo').toggle();
 *
-* @param {string}  tagName - The element to insert
-* @returns {selection} - The new elements as a D3 selection.
+* @returns {selection} - Returns the selection.
 **/
-function after(tagName) {
-  const elements = [];
+function toggle() {
+  const tagName = this._groups[0][0].tagName;
+  const t = document.createElement(tagName);
+  const gcs = "getComputedStyle" in window;
 
-  this.each(function() {
-    const document = this.ownerDocument;
-    const element = document.createElement(tagName);
-    this.parentNode.insertBefore(element, this.nextSibling);
-    elements.push(element);
-  });
+  document.body.appendChild(t);
+  const cStyle = (gcs ? window.getComputedStyle(t, '') : t.currentStyle).display;
+  document.body.removeChild(t);
 
-  return selectAll(elements);
+  var isHidden = this.style('display') == 'none';
+  return this.style('display', isHidden ? cStyle : 'none');
 }
 
-export default after;
+export default toggle;
 </code></pre>
         </article>
     </section>
