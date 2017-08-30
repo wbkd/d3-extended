@@ -1,5 +1,25 @@
 import { selectAll } from 'd3-selection';
 
+/**
+* jQuery equivalent: [$.after](http://api.jquery.com/after/)
+*
+* Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
+*
+* ```javascript
+* selection.after(tagName);
+* ```
+*
+* @function
+* @name after
+* @example
+* d3.selectAll('li')
+*   .after('li')
+*   .text('Item');
+*   //do something else with the inserted elements...
+*
+* @param {string}  tagName - The element to insert
+* @returns {selection} - The new elements as a D3 selection.
+**/
 function after(tagName) {
   const elements = [];
 
