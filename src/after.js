@@ -5,10 +5,6 @@ import { selectAll } from 'd3-selection';
 *
 * Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
 *
-* ```javascript
-* selection.after(tagName);
-* ```
-*
 * @function
 * @name after
 * @example

@@ -5,10 +5,6 @@ import { selectAll } from 'd3-selection';
 *
 * Inserts elements as first child of the current selection. Returns the new elements as a D3 selection.
 *
-* ```javascript
-* selection.prepend(tagName);
-* ```
-*
 * @function
 * @name prepend
 * @example
