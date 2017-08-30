@@ -4,7 +4,7 @@ d3 Extended is **compatible with d3 v4**. If you are looking for the v3 compatib
 
 This module extends [d3-selection](https://github.com/d3/d3-selection) with helpful functions which are similar to the jQuery API. If you want to get to know more about this project, feel free to read the blog post: [Replacing jQuery with d3](http://blog.webkid.io/replacing-jquery-with-d3).
 
-[d3 Extended website](http://wbkd.github.io/d3-extended/)
+You can find the docs on the [d3 Extended website](http://wbkd.github.io/d3-extended/)
 
 ### Installation
 
