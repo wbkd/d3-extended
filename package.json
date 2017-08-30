@@ -28,6 +28,7 @@
     "babel-preset-es2015": "^6.24.1",
     "docdash": "^0.4.0",
     "jsdoc": "^3.5.4",
+    "jsdoc-template": "git+https://github.com/braintree/jsdoc-template.git",
     "jsdom": "^9.12.0",
     "rollup": "0.27",
     "rollup-plugin-babel": "^3.0.2",

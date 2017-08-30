@@ -1,98 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Global - Documentation</title>
 
-    <script src="scripts/prettify/prettify.js"></script>
-    <script src="scripts/prettify/lang-css.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      Global - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
 </head>
+
 <body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger" class="navicon-button x">
-  <div class="navicon"></div>
-</label>
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
 
-<label for="nav-trigger" class="overlay"></label>
+  <label for="nav-trigger" class="overlay"></label>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addClass">addClass</a></li><li><a href="global.html#after">after</a></li><li><a href="global.html#appendTo">appendTo</a></li><li><a href="global.html#before">before</a></li><li><a href="global.html#clear">clear</a></li><li><a href="global.html#css">css</a></li><li><a href="global.html#eq">eq</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#hasClass">hasClass</a></li><li><a href="global.html#hide">hide</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#moveToBack">moveToBack</a></li><li><a href="global.html#moveToFront">moveToFront</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#prepend">prepend</a></li><li><a href="global.html#removeClass">removeClass</a></li><li><a href="global.html#show">show</a></li><li><a href="global.html#toggle">toggle</a></li><li><a href="global.html#toggleClass">toggleClass</a></li></ul>
-</nav>
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
 
-<div id="main">
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      Braintree SDK Client Reference
+    </h3>
+
+    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#addClass">addClass</a></li><li><a href="global.html#after">after</a></li><li><a href="global.html#appendTo">appendTo</a></li><li><a href="global.html#before">before</a></li><li><a href="global.html#clear">clear</a></li><li><a href="global.html#css">css</a></li><li><a href="global.html#eq">eq</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#hasClass">hasClass</a></li><li><a href="global.html#hide">hide</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#moveToBack">moveToBack</a></li><li><a href="global.html#moveToFront">moveToFront</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#prepend">prepend</a></li><li><a href="global.html#removeClass">removeClass</a></li><li><a href="global.html#show">show</a></li><li><a href="global.html#toggle">toggle</a></li><li><a href="global.html#toggleClass">toggleClass</a></li></ul>
+  </nav>
+
+  <div id="main">
     
-    <h1 class="page-title">Global</h1>
+      <h1 class="page-title">
+        Global
+      </h1>
     
 
     
-
-
-
 
 <section>
-
-<header>
+  <header>
     
-        <h2>
+      <h2>
         
-        </h2>
         
-    
-</header>
+        
+      </h2>
 
-<article>
+      
+    
+  </header>
+
+  <article>
     <div class="container-overview">
-    
+      
+        
+
         
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
-
-
         
-
-        
-    
+      
     </div>
 
     
@@ -108,68 +155,33 @@
     
 
     
-        <h3 class="subsection-title">Methods</h3>
+      <h3 class="subsection-title">Methods</h3>
 
+      
         
-            
-
-    
-
-    <h4 class="name" id="addClass"><span class="type-signature"></span>addClass<span class="signature">(className)</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
 
 
+  
 
+  <span class='name-container'>
+    <a class="link-icon" href="#addClass">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addClass">
+      <span class="type-signature"></span>addClass<span class="signature">(className)</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
 
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="addClass.js.html">addClass.js</a>, <a href="addClass.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
+  
 
 
 
-
-
-<div class="description">
+  <div class="description">
     <p>jQuery equivalent: <a href="http://api.jquery.com/addclass/">$.addClass</a></p>
 <p>Adds class to elements in the current selection. Returns current selection.</p>
-</div>
+  </div>
 
 
 
@@ -177,163 +189,274 @@
 
 
 
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>d3.selectAll('ul').addClass('active');
-d3.selectAll('ul').addClass('class-a class-b'); //will add two classes</code></pre>
-
-
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>className</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>className</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"><p>The class to insert</p></td>
-        </tr>
+        <td class="description last">
+          <p>The class to insert</p>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
 
 
 
 
 
+<dl class="details">
 
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-<h5>Returns:</h5>
+  
 
-        
-<div class="param-desc">
-    <ul>
-<li>The current selection</li>
-</ul>
-</div>
+  
 
+  
 
+  
 
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="addClass.js.html">addClass.js</a>, <a href="addClass.js.html#line1">line 1</a>
+        </li>
+      </ul>
     </dd>
+  
+
+  
+
+  
+
+  
 </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#addClass-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="addClass-examples">Example</h5>
     
 
+  <pre class="prettyprint"><code>d3.selectAll('ul').addClass('active');
+d3.selectAll('ul').addClass('class-a class-b'); //will add two classes</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#after">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="after">
+      <span class="type-signature"></span>after<span class="signature">(tagName)</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>jQuery equivalent: <a href="http://api.jquery.com/after/">$.after</a></p>
+<p>Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>tagName</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
+    
+
+
+          
+        </td>
 
         
-            
+
+        
+
+        <td class="description last">
+          <p>The element to insert</p>
+          
+        </td>
+      </tr>
 
     
+  </tbody>
+</table>
 
-    <h4 class="name" id="after"><span class="type-signature"></span>after<span class="signature">(tagName)</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
 
 
 
 
 <dl class="details">
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="after.js.html">after.js</a>, <a href="after.js.html#line3">line 3</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="after.js.html">after.js</a>, <a href="after.js.html#line3">line 3</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  
 </dl>
 
 
 
 
 
-<div class="description">
-    <p>jQuery equivalent: <a href="http://api.jquery.com/after/">$.after</a></p>
-<p>Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.</p>
-</div>
 
 
 
@@ -342,164 +465,49 @@ d3.selectAll('ul').addClass('class-a class-b'); //will add two classes</code></p
 
 
 
-
-    <h5>Example</h5>
+  <div class="example-container">
+    <a class="link-icon" href="#after-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="after-examples">Example</h5>
     
-    <pre class="prettyprint"><code>d3.selectAll('li')
+
+  <pre class="prettyprint"><code>d3.selectAll('li')
   .after('li')
   .text('Item');
   //do something else with the inserted elements...</code></pre>
 
 
+  </div>
 
 
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
+      
         
 
-        <th>Type</th>
 
-        
+  
 
-        
+  <span class='name-container'>
+    <a class="link-icon" href="#appendTo">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="appendTo">
+      <span class="type-signature"></span>appendTo<span class="signature">(tagName)</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
 
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>tagName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The element to insert</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
+  
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>The new elements as a D3 selection.</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="appendTo"><span class="type-signature"></span>appendTo<span class="signature">(tagName)</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="appendTo.js.html">appendTo.js</a>, <a href="appendTo.js.html#line3">line 3</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
+  <div class="description">
     <p>jQuery equivalent: <a href="http://api.jquery.com/appendto/">$.appendTo</a></p>
 <p>Appends elements of the current selection to the target element. Returns the target selection.</p>
-</div>
+  </div>
 
 
 
@@ -507,162 +515,273 @@ d3.selectAll('ul').addClass('class-a class-b'); //will add two classes</code></p
 
 
 
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>d3.selectAll('.foo').appendTo('.target');</code></pre>
-
-
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>tagName</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>tagName</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"><p>The element to append</p></td>
-        </tr>
+        <td class="description last">
+          <p>The element to append</p>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
 
 
 
 
 
+<dl class="details">
 
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-<h5>Returns:</h5>
+  
 
-        
-<div class="param-desc">
-    <ul>
-<li>The target selection.</li>
-</ul>
-</div>
+  
 
+  
 
+  
 
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="appendTo.js.html">appendTo.js</a>, <a href="appendTo.js.html#line3">line 3</a>
+        </li>
+      </ul>
     </dd>
+  
+
+  
+
+  
+
+  
 </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#appendTo-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="appendTo-examples">Example</h5>
     
 
+  <pre class="prettyprint"><code>d3.selectAll('.foo').appendTo('.target');</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#before">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="before">
+      <span class="type-signature"></span>before<span class="signature">(tagName)</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>jQuery equivalent: <a href="http://api.jquery.com/before/">$.before</a></p>
+<p>Inserts new elements before each element in the current selection. Returns the newly created elements as a d3 selection.</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>tagName</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
+    
+
+
+          
+        </td>
 
         
-            
+
+        
+
+        <td class="description last">
+          <p>The element to insert</p>
+          
+        </td>
+      </tr>
 
     
+  </tbody>
+</table>
 
-    <h4 class="name" id="before"><span class="type-signature"></span>before<span class="signature">(tagName)</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
 
 
 
 
 <dl class="details">
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="before.js.html">before.js</a>, <a href="before.js.html#line3">line 3</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="before.js.html">before.js</a>, <a href="before.js.html#line3">line 3</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  
 </dl>
 
 
 
 
 
-<div class="description">
-    <p>jQuery equivalent: <a href="http://api.jquery.com/before/">$.before</a></p>
-<p>Inserts new elements before each element in the current selection. Returns the newly created elements as a d3 selection.</p>
-</div>
 
 
 
@@ -671,165 +790,108 @@ d3.selectAll('ul').addClass('class-a class-b'); //will add two classes</code></p
 
 
 
-
-    <h5>Example</h5>
+  <div class="example-container">
+    <a class="link-icon" href="#before-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="before-examples">Example</h5>
     
-    <pre class="prettyprint"><code>d3.selectAll('li')
+
+  <pre class="prettyprint"><code>d3.selectAll('li')
   .before('li')
   .text('Item');
   //do something else with the inserted elements...</code></pre>
 
 
+  </div>
 
 
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
+      
         
 
-        <th>Type</th>
 
-        
+  
 
-        
+  <span class='name-container'>
+    <a class="link-icon" href="#clear">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="clear">
+      <span class="type-signature"></span>clear<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
 
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>tagName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
+  
 
 
-            
-            </td>
 
-            
-
-            
-
-            <td class="description last"><p>The element to insert</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
+  <div class="description">
+    <p>jQuery equivalent: <a href="http://api.jquery.com/empty/">$.empty</a></p>
+<p>Removes all children of the current selection. Returns the current selection.
+We are using another name for this function as in jQuery, because d3 already has an empty function.</p>
+  </div>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>The new elements as a D3 selection.</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="clear"><span class="type-signature"></span>clear<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
 
 
 
 
 <dl class="details">
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="clear.js.html">clear.js</a>, <a href="clear.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="clear.js.html">clear.js</a>, <a href="clear.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  
 </dl>
 
 
 
 
 
-<div class="description">
-    <p>jQuery equivalent: <a href="http://api.jquery.com/empty/">$.empty</a></p>
-<p>Removes all children of the current selection. Returns the current selection.
-We are using another name for this function as in jQuery, because d3 already has an empty function.</p>
-</div>
 
 
 
@@ -838,115 +900,49 @@ We are using another name for this function as in jQuery, because d3 already has
 
 
 
-
-    <h5>Example</h5>
+  <div class="example-container">
+    <a class="link-icon" href="#clear-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="clear-examples">Example</h5>
     
-    <pre class="prettyprint"><code>d3.selectAll('ul')
+
+  <pre class="prettyprint"><code>d3.selectAll('ul')
   .clear();
   // ul element has no children anymore.</code></pre>
 
 
+  </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    <ul>
-<li>The current selection</li>
-</ul>
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#css">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="css">
+      <span class="type-signature"></span>css<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="css"><span class="type-signature"></span>css<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="css.js.html">css.js</a>, <a href="css.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
+  <div class="description">
     <p>jQuery equivalent: <a href="http://api.jquery.com/css/">$.css</a></p>
 <p>Applies style to elements in the current selection. Returns the selection.
 Works in the same way like the D3 style function we only changed the name here.</p>
-</div>
+  </div>
 
 
 
@@ -956,113 +952,105 @@ Works in the same way like the D3 style function we only changed the name here.<
 
 
 
-    <h5>Example</h5>
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="css.js.html">css.js</a>, <a href="css.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#css-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="css-examples">Example</h5>
     
-    <pre class="prettyprint"><code>selection.css(name, value);
+
+  <pre class="prettyprint"><code>selection.css(name, value);
 selection.css(object);</code></pre>
 
 
+  </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
+      
         
-<div class="param-desc">
-    <ul>
-<li>The current selection</li>
-</ul>
-</div>
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#eq">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="eq">
+      <span class="type-signature"></span>eq<span class="signature">(index, groupIndex<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {element}</span>
+    </h4>
+  </span>
+
+  
 
 
 
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="eq"><span class="type-signature"></span>eq<span class="signature">(index, groupIndex<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {element}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="eq.js.html">eq.js</a>, <a href="eq.js.html#line3">line 3</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
+  <div class="description">
     <p>jQuery equivalent: <a href="http://api.jquery.com/eq/">$.eq</a></p>
 <p>Reduces current selection to the element with the passed index. Returns element.
 If you have a nested group, you can also specify the group index, to select a certain group.</p>
-</div>
+  </div>
 
 
 
@@ -1070,320 +1058,316 @@ If you have a nested group, you can also specify the group index, to select a ce
 
 
 
+  <h5>Parameters:</h5>
+  
 
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
 
-    <h5>Example</h5>
+      <th>Type</th>
+
+      
+        <th>Attributes</th>
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
     
-    <pre class="prettyprint"><code>d3.selectAll('li').eq('0');
+      <tr>
+        
+          <td class="name"><code>index</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+
+            
+
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The index to select</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>groupIndex</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>Group to select</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="eq.js.html">eq.js</a>, <a href="eq.js.html#line3">line 3</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#eq-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="eq-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>d3.selectAll('li').eq('0');
 // returns first li element</code></pre>
 
 
+  </div>
 
 
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
+      
         
 
-        <th>Type</th>
 
-        
-        <th>Attributes</th>
-        
+  
 
-        
+  <span class='name-container'>
+    <a class="link-icon" href="#first">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="first">
+      <span class="type-signature"></span>first<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
 
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+  
 
-    <tbody>
-    
 
-        <tr>
-            
-                <td class="name"><code>index</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The index to select</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>groupIndex</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Group to select</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>The element</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">element</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="first"><span class="type-signature"></span>first<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="first.js.html">first.js</a>, <a href="first.js.html#line3">line 3</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
+  <div class="description">
     <p>jQuery equivalent: <a href="http://api.jquery.com/first/">$.first</a></p>
 <p>Reduces the current selection to the first element. Then returns the reduced selection.</p>
-</div>
+  </div>
 
 
 
 
 
 
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>d3.selectAll('ul').first();</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>The reduced selection</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="hasClass"><span class="type-signature"></span>hasClass<span class="signature">(className)</span><span class="type-signature"> &rarr; {bool}</span></h4>
-
-    
 
 
 
 
 <dl class="details">
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="hasClass.js.html">hasClass.js</a>, <a href="hasClass.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="first.js.html">first.js</a>, <a href="first.js.html#line3">line 3</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  
 </dl>
 
 
 
 
 
-<div class="description">
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#first-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="first-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>d3.selectAll('ul').first();</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#hasClass">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="hasClass">
+      <span class="type-signature"></span>hasClass<span class="signature">(className)</span><span class="type-signature"> &rarr; {bool}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     <p>jQuery equivalent: <a href="http://api.jquery.com/hasclass/">$.hasClass</a></p>
 <p>Checks if current selection has the passed class. Returns true or false.</p>
-</div>
+  </div>
 
 
 
@@ -1391,288 +1375,266 @@ If you have a nested group, you can also specify the group index, to select a ce
 
 
 
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>d3.selectAll('ul').hasClass('active');</code></pre>
-
-
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>className</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>className</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"><p>The element to append</p></td>
-        </tr>
+        <td class="description last">
+          <p>The element to append</p>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>True if the selection has the passed class</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">bool</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="hide"><span class="type-signature"></span>hide<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
-
-
-
-
 <dl class="details">
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="hide.js.html">hide.js</a>, <a href="hide.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="hasClass.js.html">hasClass.js</a>, <a href="hasClass.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  
 </dl>
 
 
 
 
 
-<div class="description">
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#hasClass-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="hasClass-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>d3.selectAll('ul').hasClass('active');</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#hide">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="hide">
+      <span class="type-signature"></span>hide<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     <p>jQuery equivalent: <a href="http://api.jquery.com/hide/">$.hide</a></p>
 <p>Hides the current selection. Returns the selection.</p>
-</div>
+  </div>
 
 
 
 
 
 
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>d3.selectAll('.foo').hide();</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>The selection.</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="last"><span class="type-signature"></span>last<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
 
 
 
 
 <dl class="details">
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="last.js.html">last.js</a>, <a href="last.js.html#line3">line 3</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="hide.js.html">hide.js</a>, <a href="hide.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  
 </dl>
 
 
 
 
 
-<div class="description">
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#hide-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="hide-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>d3.selectAll('.foo').hide();</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#last">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="last">
+      <span class="type-signature"></span>last<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     <p>jQuery equivalent: <a href="http://api.jquery.com/last/">$.last</a></p>
 <p>Reduces the current selection to the last element. Then returns the reduced selection.</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>d3.selectAll('ul').last();</code></pre>
+  </div>
 
 
 
@@ -1683,277 +1645,313 @@ If you have a nested group, you can also specify the group index, to select a ce
 
 
 
+<dl class="details">
 
+  
 
+  
 
+  
 
+  
 
+  
 
-<h5>Returns:</h5>
+  
 
-        
-<div class="param-desc">
-    <ul>
-<li>The reduced selection.</li>
-</ul>
-</div>
+  
 
+  
 
+  
 
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
+  
 
+  
 
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="last.js.html">last.js</a>, <a href="last.js.html#line3">line 3</a>
+        </li>
+      </ul>
     </dd>
+  
+
+  
+
+  
+
+  
 </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#last-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="last-examples">Example</h5>
     
 
+  <pre class="prettyprint"><code>d3.selectAll('ul').last();</code></pre>
 
+
+  </div>
+
+
+      
         
-            
-
-    
-
-    <h4 class="name" id="moveToBack"><span class="type-signature"></span>moveToBack<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
 
 
+  
 
+  <span class='name-container'>
+    <a class="link-icon" href="#moveToBack">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="moveToBack">
+      <span class="type-signature"></span>moveToBack<span class="signature">()</span><span class="type-signature"></span>
+    </h4>
+  </span>
 
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="moveToBack.js.html">moveToBack.js</a>, <a href="moveToBack.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
+  
 
 
 
-
-
-<div class="description">
+  <div class="description">
     <p>Displays SVG element above the other ones.</p>
-</div>
+  </div>
 
 
 
 
 
 
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>d3.select('svg circle').moveToBack();</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="moveToFront"><span class="type-signature"></span>moveToFront<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
 
 
 
 
 <dl class="details">
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="moveToFront.js.html">moveToFront.js</a>, <a href="moveToFront.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="moveToBack.js.html">moveToBack.js</a>, <a href="moveToBack.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  
 </dl>
 
 
 
 
 
-<div class="description">
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#moveToBack-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="moveToBack-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>d3.select('svg circle').moveToBack();</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#moveToFront">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="moveToFront">
+      <span class="type-signature"></span>moveToFront<span class="signature">()</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     <p>Displays SVG element below the other ones.</p>
-</div>
+  </div>
 
 
 
 
 
 
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>d3.select('svg circle').moveToFront();</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="on"><span class="type-signature"></span>on<span class="signature">(types, listener, capture)</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
 
 
 
 
 <dl class="details">
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="on.js.html">on.js</a>, <a href="on.js.html#line5">line 5</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="moveToFront.js.html">moveToFront.js</a>, <a href="moveToFront.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  
 </dl>
 
 
 
 
 
-<div class="description">
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#moveToFront-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="moveToFront-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>d3.select('svg circle').moveToFront();</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#on">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="on">
+      <span class="type-signature"></span>on<span class="signature">(types, listener, capture)</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     <p>jQuery equivalent: <a href="http://api.jquery.com/on/">$.on</a></p>
 <p>Works like the normal <code>on</code> function but now you can pass multiple event types like you know it from jquery.
 We took this function from the awesome <a href="https://github.com/gka/d3-jetpack">d3-jetpack</a></p>
-</div>
+  </div>
 
 
 
@@ -1961,210 +1959,333 @@ We took this function from the awesome <a href="https://github.com/gka/d3-jetpac
 
 
 
+  <h5>Parameters:</h5>
+  
 
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
 
-    <h5>Example</h5>
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
     
-    <pre class="prettyprint"><code>d3.select('li').on('click mouseenter mouseleave', function(d, i) {
+      <tr>
+        
+          <td class="name"><code>types</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>-</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>listener</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>-</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>capture</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>-</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="on.js.html">on.js</a>, <a href="on.js.html#line5">line 5</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#on-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="on-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>d3.select('li').on('click mouseenter mouseleave', function(d, i) {
   // do something
 });</code></pre>
 
 
+  </div>
 
 
-    <h5>Parameters:</h5>
-    
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#prepend">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="prepend">
+      <span class="type-signature"></span>prepend<span class="signature">(tagName)</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>jQuery equivalent: <a href="http://api.jquery.com/prepend/">$.prepend</a></p>
+<p>Inserts elements as first child of the current selection. Returns the new elements as a D3 selection.</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
     
+      <tr>
+        
+          <td class="name"><code>tagName</code></td>
+        
 
-        <tr>
+        <td class="type">
+          
             
-                <td class="name"><code>types</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>-</p></td>
-        </tr>
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
-            
-                <td class="name"><code>listener</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"><p>-</p></td>
-        </tr>
+        <td class="description last">
+          <p>The element to append</p>
+          
+        </td>
+      </tr>
 
     
-
-        <tr>
-            
-                <td class="name"><code>capture</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>-</p></td>
-        </tr>
-
-    
-    </tbody>
+  </tbody>
 </table>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>The target selection.</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="prepend"><span class="type-signature"></span>prepend<span class="signature">(tagName)</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
-
-
-
-
 <dl class="details">
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="prepend.js.html">prepend.js</a>, <a href="prepend.js.html#line3">line 3</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="prepend.js.html">prepend.js</a>, <a href="prepend.js.html#line3">line 3</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  
 </dl>
 
 
 
 
 
-<div class="description">
-    <p>jQuery equivalent: <a href="http://api.jquery.com/prepend/">$.prepend</a></p>
-<p>Inserts elements as first child of the current selection. Returns the new elements as a D3 selection.</p>
-</div>
 
 
 
@@ -2173,164 +2294,162 @@ We took this function from the awesome <a href="https://github.com/gka/d3-jetpac
 
 
 
-
-    <h5>Example</h5>
+  <div class="example-container">
+    <a class="link-icon" href="#prepend-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="prepend-examples">Example</h5>
     
-    <pre class="prettyprint"><code>d3.selectAll('li')
+
+  <pre class="prettyprint"><code>d3.selectAll('li')
   .prepend('a')
   .text('Some Link')
   //do somethin else with the link</code></pre>
 
 
+  </div>
 
 
-    <h5>Parameters:</h5>
-    
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#removeClass">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="removeClass">
+      <span class="type-signature"></span>removeClass<span class="signature">(className)</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>jQuery equivalent: <a href="http://api.jquery.com/removeclass/">$.removeClass</a></p>
+<p>Removes class from elements in the current selection. Returns current selection.</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>className</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>tagName</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"><p>The element to append</p></td>
-        </tr>
+        <td class="description last">
+          <p>The class to remove</p>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>The new elements as a D3 selection.</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="removeClass"><span class="type-signature"></span>removeClass<span class="signature">(className)</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
-
-
-
-
 <dl class="details">
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="removeClass.js.html">removeClass.js</a>, <a href="removeClass.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="removeClass.js.html">removeClass.js</a>, <a href="removeClass.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  
 </dl>
 
 
 
 
 
-<div class="description">
-    <p>jQuery equivalent: <a href="http://api.jquery.com/removeclass/">$.removeClass</a></p>
-<p>Removes class from elements in the current selection. Returns current selection.</p>
-</div>
 
 
 
@@ -2339,276 +2458,372 @@ We took this function from the awesome <a href="https://github.com/gka/d3-jetpac
 
 
 
-
-    <h5>Example</h5>
+  <div class="example-container">
+    <a class="link-icon" href="#removeClass-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="removeClass-examples">Example</h5>
     
-    <pre class="prettyprint"><code>d3.selectAll('ul').removeClass('active');
+
+  <pre class="prettyprint"><code>d3.selectAll('ul').removeClass('active');
 d3.selectAll('ul').removeClass('class-a class-b'); //will remove two classes</code></pre>
 
 
+  </div>
 
 
-    <h5>Parameters:</h5>
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#show">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="show">
+      <span class="type-signature"></span>show<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>jQuery equivalent: <a href="http://api.jquery.com/show/">$.show</a></p>
+<p>Diplays the current selection. Returns the selection.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="show.js.html">show.js</a>, <a href="show.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#show-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="show-examples">Example</h5>
     
+
+  <pre class="prettyprint"><code>d3.selectAll('.foo').show();</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#toggle">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="toggle">
+      <span class="type-signature"></span>toggle<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>jQuery equivalent: <a href="http://api.jquery.com/toggle/">$.toggle</a></p>
+<p>Diplays or hides the current selection. Returns the selection.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="toggle.js.html">toggle.js</a>, <a href="toggle.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#toggle-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="toggle-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>d3.selectAll('.foo').toggle();</code></pre>
+
+
+  </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#toggleClass">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="toggleClass">
+      <span class="type-signature"></span>toggleClass<span class="signature">(className)</span><span class="type-signature"> &rarr; {selection}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>jQuery equivalent: <a href="http://api.jquery.com/toggleclass/">$.toggleClass</a></p>
+<p>Adds or removes class from elements in the current selection. Returns current selection.</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>className</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>className</code></td>
-            
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
+          
+        </td>
 
+        
 
-            
-            </td>
+        
 
-            
-
-            
-
-            <td class="description last"><p>The class to remove</p></td>
-        </tr>
+        <td class="description last">
+          <p>The css class to toggle</p>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>The current selection</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="show"><span class="type-signature"></span>show<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
-
-
-
-
 <dl class="details">
 
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="show.js.html">show.js</a>, <a href="show.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>jQuery equivalent: <a href="http://api.jquery.com/show/">$.show</a></p>
-<p>Diplays the current selection. Returns the selection.</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>d3.selectAll('.foo').show();</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>Returns the selection.</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="toggleClass.js.html">toggleClass.js</a>, <a href="toggleClass.js.html#line1">line 1</a>
+        </li>
+      </ul>
     </dd>
-</dl>
+  
 
-    
+  
 
+  
 
-        
-            
-
-    
-
-    <h4 class="name" id="toggle"><span class="type-signature"></span>toggle<span class="signature">()</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="toggle.js.html">toggle.js</a>, <a href="toggle.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  
 </dl>
 
 
 
 
 
-<div class="description">
-    <p>jQuery equivalent: <a href="http://api.jquery.com/toggle/">$.toggle</a></p>
-<p>Diplays or hides the current selection. Returns the selection.</p>
-</div>
 
 
 
@@ -2617,238 +2832,46 @@ d3.selectAll('ul').removeClass('class-a class-b'); //will remove two classes</co
 
 
 
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>d3.selectAll('.foo').toggle();</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>Returns the selection.</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
-    </dd>
-</dl>
-
+  <div class="example-container">
+    <a class="link-icon" href="#toggleClass-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="toggleClass-examples">Example</h5>
     
 
-
-        
-            
-
-    
-
-    <h4 class="name" id="toggleClass"><span class="type-signature"></span>toggleClass<span class="signature">(className)</span><span class="type-signature"> &rarr; {selection}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="toggleClass.js.html">toggleClass.js</a>, <a href="toggleClass.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>jQuery equivalent: <a href="http://api.jquery.com/toggleclass/">$.toggleClass</a></p>
-<p>Adds or removes class from elements in the current selection. Returns current selection.</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>d3.selectAll('ul').toggleClass('active');
+  <pre class="prettyprint"><code>d3.selectAll('ul').toggleClass('active');
 d3.selectAll('ul').toggleClass('class-a class-b'); //toggle multiple classes</code></pre>
 
 
+  </div>
 
 
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>className</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The css class to toggle</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <ul>
-<li>Returns current selection.</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">selection</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
+      
     
 
     
 
     
-</article>
-
+  </article>
 </section>
 
 
 
 
-</div>
+  </div>
 
-<br class="clear">
+  <br class="clear">
 
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
-</footer>
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a>
+  </footer>
 
-<script>prettyPrint();</script>
-<script src="scripts/linenumber.js"></script>
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
+
+  
+  
 </body>
 </html>
