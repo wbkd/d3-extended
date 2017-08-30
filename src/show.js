@@ -1,3 +1,16 @@
+/**
+* jQuery equivalent: [$.show](http://api.jquery.com/show/)
+*
+* Diplays the current selection. Returns the selection.
+*
+* @function
+* @name show
+* @example
+* d3.selectAll('.foo').show();
+*
+* @returns {selection} - Returns the selection.
+**/
+funct
 function show() {
   const tagName = this._groups[0][0].tagName;
   const t = document.createElement(tagName);

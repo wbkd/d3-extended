@@ -1,3 +1,15 @@
+/**
+* jQuery equivalent: [$.toggle](http://api.jquery.com/toggle/)
+*
+* Diplays or hides the current selection. Returns the selection.
+*
+* @function
+* @name toggle
+* @example
+* d3.selectAll('.foo').toggle();
+*
+* @returns {selection} - Returns the selection.
+**/
 function toggle() {
   const tagName = this._groups[0][0].tagName;
   const t = document.createElement(tagName);
