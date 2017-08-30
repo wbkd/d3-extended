@@ -1,5 +1,18 @@
 import { selectAll } from 'd3-selection';
 
+/**
+* jQuery equivalent: [$.appendTo](http://api.jquery.com/appendto/)
+*
+* Appends elements of the current selection to the target element. Returns the target selection.
+*
+* @function
+* @name appendTo
+* @example
+* d3.selectAll('.foo').appendTo('.target');
+*
+* @param {string}  tagName - The element to append
+* @returns {selection} - The target selection.
+**/
 function appendTo(selection) {
   const targets = selection;
   const targetCount = targets.size();
