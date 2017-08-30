@@ -10,7 +10,6 @@
 *
 * @param {string}  className - The class to insert
 * @returns {selection} - The current selection
-* @exports selection.addClass
 **/
 function addClass(classNames) {
   this.classed(classNames, true);

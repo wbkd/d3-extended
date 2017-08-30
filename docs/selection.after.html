@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      before.js - Documentation
+      after - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -72,57 +70,123 @@
       d3-extended
     </h3>
 
-    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#addClass">addClass</a></li><li><a href="global.html#after">after</a></li><li><a href="global.html#appendTo">appendTo</a></li><li><a href="global.html#before">before</a></li><li><a href="global.html#clear">clear</a></li><li><a href="global.html#css">css</a></li><li><a href="global.html#eq">eq</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#hasClass">hasClass</a></li><li><a href="global.html#hide">hide</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#moveToBack">moveToBack</a></li><li><a href="global.html#moveToFront">moveToFront</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#prepend">prepend</a></li><li><a href="global.html#removeClass">removeClass</a></li><li><a href="global.html#show">show</a></li><li><a href="global.html#toggle">toggle</a></li><li><a href="global.html#toggleClass">toggleClass</a></li></ul>
+    <h3>Modules</h3><ul><li id="selection-nav"><a href="module-selection.html">selection</a></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#appendTo">appendTo</a></li><li><a href="global.html#before">before</a></li><li><a href="global.html#clear">clear</a></li><li><a href="global.html#css">css</a></li><li><a href="global.html#eq">eq</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#hasClass">hasClass</a></li><li><a href="global.html#hide">hide</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#moveToBack">moveToBack</a></li><li><a href="global.html#moveToFront">moveToFront</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#prepend">prepend</a></li><li><a href="global.html#removeClass">removeClass</a></li><li><a href="global.html#show">show</a></li><li><a href="global.html#toggle">toggle</a></li><li><a href="global.html#toggleClass">toggleClass</a></li></ul>
   </nav>
 
   <div id="main">
     
       <h1 class="page-title">
-        before.js
+        after
       </h1>
     
 
     
-      
 
 <section>
+  <header>
+    
+      <h2>
+        
+        after
+        
+      </h2>
+
+      
+    
+  </header>
+
   <article>
-    <pre class="prettyprint source linenums"><code>import { selectAll } from 'd3-selection';
+    <div class="container-overview">
+      
+        
+            <div class="description">
+              <p>jQuery equivalent: <a href="http://api.jquery.com/after/">$.after</a></p>
+<p>Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.</p>
+            </div>
+        
 
-/**
-* jQuery equivalent: [$.before](http://api.jquery.com/before/)
-*
-* Inserts new elements before each element in the current selection. Returns the newly created elements as a d3 selection.
-*
-* @function before
-* @example
-* d3.selectAll('li')
-*   .before('li')
-*   .text('Item');
-*   //do something else with the inserted elements...
-*
-* @param {string}  tagName - The element to insert
-* @returns {selection} - The new elements as a D3 selection.
-**/
-function before(tagName) {
-  const elements = [];
+        
 
-  this.each(function() {
-    const document = this.ownerDocument;
-    const element = document.createElement(tagName);
-    this.parentNode.insertBefore(element, this);
-    elements.push(element);
-  });
+<dl class="details">
 
-  return selectAll(elements);
-}
+  
 
-export default before
-</code></pre>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="src_after.js.html">src/after.js</a>, <a href="src_after.js.html#line3">line 3</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+        
+          <h3>Example</h3>
+          
+
+  <pre class="prettyprint"><code>d3.selectAll('li')
+  .after('li')
+  .text('Item');
+  //do something else with the inserted elements...</code></pre>
+
+
+        
+      
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
   </article>
 </section>
 
-    
+
 
 
   </div>

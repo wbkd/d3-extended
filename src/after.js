@@ -14,7 +14,6 @@ import { selectAll } from 'd3-selection';
 *
 * @param {string}  tagName - The element to insert
 * @returns {selection} - The new elements as a D3 selection.
-* @exports selection.after
 **/
 function after(tagName) {
   const elements = [];
