@@ -5,8 +5,7 @@ import { selectAll } from 'd3-selection';
 *
 * Inserts new elements before each element in the current selection. Returns the newly created elements as a d3 selection.
 *
-* @function
-* @name before
+* @function before
 * @example
 * d3.selectAll('li')
 *   .before('li')

@@ -3,8 +3,7 @@
 *
 * Diplays or hides the current selection. Returns the selection.
 *
-* @function
-* @name toggle
+* @function toggle
 * @example
 * d3.selectAll('.foo').toggle();
 *

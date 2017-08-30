@@ -3,8 +3,7 @@
 *
 * Removes class from elements in the current selection. Returns current selection.
 *
-* @function
-* @name removeClass
+* @function removeClass
 * @example
 * d3.selectAll('ul').removeClass('active');
 * d3.selectAll('ul').removeClass('class-a class-b'); //will remove two classes

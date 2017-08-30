@@ -3,8 +3,7 @@
 *
 * Diplays the current selection. Returns the selection.
 *
-* @function
-* @name show
+* @function show
 * @example
 * d3.selectAll('.foo').show();
 *

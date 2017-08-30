@@ -5,8 +5,7 @@ import { selectAll } from 'd3-selection';
 *
 * Inserts elements as first child of the current selection. Returns the new elements as a D3 selection.
 *
-* @function
-* @name prepend
+* @function prepend
 * @example
 * d3.selectAll('li')
 *   .prepend('a')

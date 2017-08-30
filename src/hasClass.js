@@ -3,8 +3,7 @@
 *
 * Checks if current selection has the passed class. Returns true or false.
 *
-* @function
-* @name hasClass
+* @function hasClass
 * @example
 * d3.selectAll('ul').hasClass('active');
 *

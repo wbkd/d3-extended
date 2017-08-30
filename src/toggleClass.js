@@ -3,8 +3,7 @@
 *
 * Adds or removes class from elements in the current selection. Returns current selection.
 *
-* @function
-* @name toggleClass
+* @function toggleClass
 * @example
 * d3.selectAll('ul').toggleClass('active');
 * d3.selectAll('ul').toggleClass('class-a class-b'); //toggle multiple classes

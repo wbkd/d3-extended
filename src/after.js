@@ -5,8 +5,7 @@ import { selectAll } from 'd3-selection';
 *
 * Inserts new elements after each element in the current selection. Returns the newly created elements as a d3 selection.
 *
-* @function
-* @name after
+* @function after
 * @example
 * d3.selectAll('li')
 *   .after('li')
@@ -15,6 +14,7 @@ import { selectAll } from 'd3-selection';
 *
 * @param {string}  tagName - The element to insert
 * @returns {selection} - The new elements as a D3 selection.
+* @exports selection.after
 **/
 function after(tagName) {
   const elements = [];

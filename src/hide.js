@@ -3,8 +3,7 @@
 *
 * Hides the current selection. Returns the selection.
 *
-* @function
-* @name hide
+* @function hide
 * @example
 * d3.selectAll('.foo').hide();
 *

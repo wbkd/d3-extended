@@ -5,8 +5,7 @@ import { select } from 'd3-selection';
 *
 * Reduces the current selection to the last element. Then returns the reduced selection.
 *
-* @function
-* @name last
+* @function last
 * @example
 * d3.selectAll('ul').last();
 *

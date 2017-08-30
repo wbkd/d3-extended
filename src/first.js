@@ -5,8 +5,7 @@ import { select } from 'd3-selection';
 *
 * Reduces the current selection to the first element. Then returns the reduced selection.
 *
-* @function
-* @name first
+* @function first
 * @example
 * d3.selectAll('ul').first();
 *

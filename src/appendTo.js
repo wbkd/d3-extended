@@ -5,8 +5,7 @@ import { selectAll } from 'd3-selection';
 *
 * Appends elements of the current selection to the target element. Returns the target selection.
 *
-* @function
-* @name appendTo
+* @function appendTo
 * @example
 * d3.selectAll('.foo').appendTo('.target');
 *

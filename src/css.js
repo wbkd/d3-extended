@@ -4,8 +4,7 @@
 * Applies style to elements in the current selection. Returns the selection.
 * Works in the same way like the D3 style function we only changed the name here.
 *
-* @function
-* @name css
+* @function css
 * @example
 * selection.css(name, value);
 * selection.css(object);

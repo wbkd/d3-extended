@@ -6,8 +6,7 @@ import { select } from 'd3-selection';
 * Reduces current selection to the element with the passed index. Returns element.
 * If you have a nested group, you can also specify the group index, to select a certain group.
 *
-* @function
-* @name eq
+* @function eq
 * @example
 * d3.selectAll('li').eq('0');
 * // returns first li element

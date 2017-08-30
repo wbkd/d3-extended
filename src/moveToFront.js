@@ -1,8 +1,7 @@
 /**
 * Displays SVG element below the other ones.
 *
-* @function
-* @name moveToFront
+* @function moveToFront
 * @example
 * d3.select('svg circle').moveToFront();
 *

@@ -8,8 +8,7 @@ import { selection } from 'd3-selection';
 * Works like the normal `on` function but now you can pass multiple event types like you know it from jquery.
 We took this function from the awesome [d3-jetpack](https://github.com/gka/d3-jetpack)
 *
-* @function
-* @name on
+* @function on
 * @example
 * d3.select('li').on('click mouseenter mouseleave', function(d, i) {
 *   // do something
